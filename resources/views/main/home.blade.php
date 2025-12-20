@@ -7,28 +7,28 @@
         <div class="row">
             <div class="col-lg-7 col-md-7 col-sm-12">
                 <div class="ss-banner-heading">
-                    <h5>15 Years of Experience</h5>
-                    <h1>Professional Solar Panel Supplier</h1>
-                    <p>In publishing and graphic design, ipsum is a placeholder text commonly used to
-                        ipsum is a placeholder text commonly the visual form of a document.</p>
-                    <a href="about.html" class="ss-btn">Read More</a>
+                    <h5>Clean Energy Smart Choice.</h5>
+                    <h1>Reliable Solar Energy Solutions </h1>
+                    <p>We provide reliable and cost-effective solar energy solutions for homes and businesses.
+                        Power your future with clean, renewable energy.</p>
+                    <a href="{{route('about-us')}}" class="ss-btn">Read More</a>
                 </div>
             </div>
         </div>
         <div class="ss-ban-img">
-            <img src="assets/images/main_img.png" alt="image" />
+            <img src="{{asset('')}}assets/images/main_img.png" alt="image" />
         </div>
     </div>
     <div class="ss-banner-shape">
-        <img src="assets/images/banner-icon1.png" alt="icon">
-        <img src="assets/images/banner-icon2.png" alt="icon">
-        <img src="assets/images/banner-icon3.png" alt="icon">
+        <img src="{{asset('')}}assets/images/banner-icon1.png" alt="icon">
+        <img src="{{asset('')}}assets/images/banner-icon2.png" alt="icon">
+        <img src="{{asset('')}}assets/images/banner-icon3.png" alt="icon">
     </div>
 
 </div>
 <!------------- Banner Section end ----------->
 <!------------- Dummy-logo Section start ----------->
-<div class="ss-logo-slider-wrapper">
+<!-- <div class="ss-logo-slider-wrapper">
     <div class="container-fluid">
         <div class="ss-logo-slider-sec">
             <div class="swiper ss-logo-slider">
@@ -232,7 +232,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!------------- Dummy-logo Section end ----------->
 <!------------- Natural-energy Section start ----------->
 <div class="ss-bgcover ss-solar-sec">
@@ -250,48 +250,49 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss-solar-box">
                     <div class="ss-solar-icon">
-                        <img src="assets/images/solar-plates.png" alt="icon">
+                        <img src="{{asset('')}}assets/images/solar-plates.png" alt="icon">
                     </div>
                     <div class="ss-solar-text">
                         <h3>Solar Plates</h3>
-                        <p>In publishing and graphic design, ipsum is a placeholder text commonly used to ipsum is a
-                            placeholder text commonly the visual form of a document.</p>
+                        <p>High-efficiency solar plates designed to deliver maximum power with minimum space.
+                            Durable, weather-resistant, and built for long-term performance.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss-solar-box">
                     <div class="ss-solar-icon">
-                        <img src="assets/images/solar-water.png" alt="icon">
+                        <img src="{{asset('')}}assets/images/solar-water.png" alt="icon">
                     </div>
                     <div class="ss-solar-text">
                         <h3>Solar Water Heater</h3>
-                        <p>In publishing and graphic design, ipsum is a placeholder text commonly used to ipsum is a
-                            placeholder text commonly the visual form of a document.</p>
+                        <p>Save energy and enjoy hot water all year round with eco-friendly solar water heaters.
+                            Low maintenance, cost-effective, and perfect for homes & businesses.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss-solar-box">
                     <div class="ss-solar-icon">
-                        <img src="assets/images/pv-solar.png" alt="icon">
+                        <img src="{{asset('')}}assets/images/pv-solar.png" alt="icon">
                     </div>
                     <div class="ss-solar-text">
                         <h3>PV Solar Panel</h3>
-                        <p>In publishing and graphic design, ipsum is a placeholder text commonly used to ipsum is a
-                            placeholder text commonly the visual form of a document.</p>
+
+                        <p>High-efficiency PV solar panels designed for maximum energy output and durability.
+                            Ideal for residential and commercial installations with long-term reliability.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss-solar-box">
                     <div class="ss-solar-icon">
-                        <img src="assets/images/solar-wind.png" alt="icon">
+                        <img src="{{asset('')}}assets/images/solar-wind.png" alt="icon">
                     </div>
                     <div class="ss-solar-text">
                         <h3>Solar Wind</h3>
-                        <p>In publishing and graphic design, ipsum is a placeholder text commonly used to ipsum is a
-                            placeholder text commonly the visual form of a document.</p>
+                        <p>Hybrid solar-wind systems that ensure uninterrupted power generation.
+                            A smart solution combining wind and solar energy for maximum efficiency.</p>
                     </div>
                 </div>
             </div>
@@ -305,7 +306,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="ss-about-img">
-                    <img src="assets/images/about-img.png" alt="img" data-tilt data-tilt-max="10"
+                    <img src="{{asset('')}}assets/images/about-img.png" alt="img" data-tilt data-tilt-max="10"
                         data-tilt-speed="1000" data-tilt-perspective="1000" />
                 </div>
             </div>
@@ -314,47 +315,60 @@
                     <h5>About us</h5>
                     <h3>We Are Here To Give You The Best Solar Panel For Your Home</h3>
                     <div class="bottom-line"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur. Ultrices dictum interdum a commodo molestie posuere
-                        eu lobortis. Nunc semper lectus velit nisl facilisis blandit. Purus proin in commodo
-                        elementum. Nam pretium posuere tempus mattis at. Cursus sed gravida viverra enim ipsum velit
-                        adipiscing molestie. Donec velit consequat maecenas rhoncus mauris sit faucibus in sagittis.
-                        Egestas proin in pharetra vitae convallis in luctus.</p>
+                    <p>We are a trusted renewable energy solutions provider, committed to delivering high-quality solar and green energy products. Our goal is to help homes and businesses switch to clean, affordable, and sustainable power while reducing electricity costs and carbon footprint.</p>
                 </div>
                 <div class="ss-about-list-wrap">
+
                     <div class="ss-about-list">
-                        <img src="assets/images/right-icon.png" alt="icon" />
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
+                        <p>
+
+                            Expert Solar Solutions </p>
+
                     </div>
                     <div class="ss-about-list">
-                        <img src="assets/images/right-icon.png" alt="icon" />
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
+                        <p>
+                            High-Quality Products
+                        </p>
                     </div>
                     <div class="ss-about-list">
-                        <img src="assets/images/right-icon.png" alt="icon" />
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
+                        <p>
+                            Cost-Effective Energy
+                        </p>
                     </div>
                     <div class="ss-about-list">
-                        <img src="assets/images/right-icon.png" alt="icon" />
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
+                        <p>
+                            Eco-Friendly Approach </p>
                     </div>
                     <div class="ss-about-list">
-                        <img src="assets/images/right-icon.png" alt="icon" />
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
+                        <p>
+                            Professional Installation
+
+                        </p>
                     </div>
                     <div class="ss-about-list">
-                        <img src="assets/images/right-icon.png" alt="icon" />
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
+                        <p>
+                            After-Sales Support
+
+                        </p>
                     </div>
                 </div>
+
+
                 <div class="ss-about-btn">
-                    <a href="about.html" class="ss-btn">Read More</a>
+                    <a href="{{route('about-us')}}" class="ss-btn">Read More</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="ss-bgshapes">
-        <img src="assets/images/about-bgleft.png" alt="image">
-        <img src="assets/images/about-bgright.png" alt="image">
+        <img src="{{asset('')}}assets/images/about-bgleft.png" alt="image">
+        <img src="{{asset('')}}assets/images/about-bgright.png" alt="image">
     </div>
 </div>
 <!------------- About Section end ----------->
@@ -374,61 +388,61 @@
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="ss-solar-box ss-why-box">
                     <div class="ss-why-img">
-                        <img src="assets/images/wind-generator.png" alt="icon" />
+                        <img src="{{asset('')}}assets/images/wind-generator.png" alt="icon" />
                     </div>
                     <div class="ss-solar-text">
                         <h3>Wind Generators</h3>
-                        <p>In publishing and graphic design, ipsum is a placeholder text commonly used to
-                            ipsum is a placeholder text commonly the visual form of a document.</p>
+                        <p>Wind generators use natural wind power to produce clean and renewable electricity.
+                            They are an efficient solution for reducing dependency on traditional power sources.</p>
                     </div>
                 </div>
                 <div class="ss-solar-box ss-why-box">
                     <div class="ss-why-img">
-                        <img src="assets/images/clean-energy.png" alt="icon" />
+                        <img src="{{asset('')}}assets/images/clean-energy.png" alt="icon" />
                     </div>
                     <div class="ss-solar-text">
                         <h3>Always Clean Energy</h3>
-                        <p>In publishing and graphic design, ipsum is a placeholder text commonly used to
-                            ipsum is a placeholder text commonly the visual form of a document.</p>
+                        <p>Clean energy reduces pollution and protects the environment for future generations.
+                            It provides sustainable power without harming nature or increasing carbon emissions.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12 p-0">
                 <div class="ss-why-centerimg">
-                    <img src="assets/images/center_img.png" alt="image" />
+                    <img src="{{asset('')}}assets/images/center_img.png" alt="image" />
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="ss-solar-box ss-why-box">
                     <div class="ss-why-img">
-                        <img src="assets/images/energy-reused.png" alt="icon" />
+                        <img src="{{asset('')}}assets/images/energy-reused.png" alt="icon" />
                     </div>
                     <div class="ss-solar-text">
                         <h3>Energy Can Be Reused</h3>
-                        <p>In publishing and graphic design, ipsum is a placeholder text commonly used to
-                            ipsum is a placeholder text commonly the visual form of a document.</p>
+                        <p>Renewable energy sources can be reused again and again without depletion.
+                            This ensures long-term energy availability and cost savings.</p>
                     </div>
                 </div>
                 <div class="ss-solar-box ss-why-box">
                     <div class="ss-why-img">
-                        <img src="assets/images/installation.png" alt="icon" />
+                        <img src="{{asset('')}}assets/images/installation.png" alt="icon" />
                     </div>
                     <div class="ss-solar-text">
                         <h3>Easy Installation</h3>
-                        <p>In publishing and graphic design, ipsum is a placeholder text commonly used to
-                            ipsum is a placeholder text commonly the visual form of a document.</p>
+                        <p>Our systems are designed for quick and hassle-free installation.
+                            They require minimal maintenance while delivering reliable performance.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="ss-bgshapes ss-why-bgshape">
-        <img src="assets/images/why-bgleft.png" alt="image">
-        <img src="assets/images/why-bgright.png" alt="image">
+        <img src="{{asset('')}}assets/images/why-bgleft.png" alt="image">
+        <img src="{{asset('')}}assets/images/why-bgright.png" alt="image">
     </div>
     <div class="ss-why-bgicon">
-        <img src="assets/images/why-icon1.png" alt="icon">
-        <img src="assets/images/why-icon2.png" alt="icon">
+        <img src="{{asset('')}}assets/images/why-icon1.png" alt="icon">
+        <img src="{{asset('')}}assets/images/why-icon2.png" alt="icon">
     </div>
 </div>
 <!------------- Why-choose Section end ----------->
@@ -438,23 +452,23 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="ss-heading-wrap ss-panel-heading">
-                    <h5>Solar Panel Supplier</h5>
+                    <h5>Trusted Solar Solutions</h5>
                     <h3>Light Up With Your Solar & Save Natural Resource</h3>
                     <div class="bottom-line"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur. Ultrices dictum interdum a commodo molestie posuere
-                        eu lobortis. Nunc semper lectus velit nisl facilisis blandit. Purus proin in commodo
-                        elementum. Nam pretium posuere tempus mattis at. Cursus sed gravida viverra enim ipsum velit
-                        adipiscing molestie. Donec velit consequat maecenas rhoncus mauris sit faucibus in sagittis.
-                        Egestas proin in pharetra vitae convallis in luctus.</p>
+                    <p>Harness the power of the sun with reliable and eco-friendly solar solutions.
+                        Our systems help you reduce energy costs while protecting valuable natural resources.
+                        We provide high-quality solar installations designed for long-term performance.
+                        Our expert team ensures smooth installation and dependable after-sales support.
+                        Switch to clean energy today and power your future with confidence.</p>
                 </div>
                 <div class="ss-panelimg-sec">
                     <div class="ss-pannel-img popup">
-                        <img src="assets/images/panel-1.png" alt="image" />
+                        <img src="{{asset('')}}assets/images/panel-1.png" alt="image" />
                     </div>
                     <div class="ss-pannel-img">
-                        <img src="assets/images/panel-2.png" alt="image" />
+                        <img src="{{asset('')}}assets/images/panel-2.png" alt="image" />
                         <a href="javascript:void(0);" class="ss-panel-videoicon" id="popup">
-                            <img src="assets/images/video.png" a;t="icon">
+                            <img src="{{asset('')}}assets/images/video.png" a;t="icon">
                         </a>
                         <div id="videopopup1" class="ss-videopopup">
                             <div class="ss-videopopup-content">
@@ -465,7 +479,7 @@
                         </div>
                     </div>
                     <div class="ss-pannel-img popup">
-                        <img src="assets/images/panel-3.png" alt="image" />
+                        <img src="{{asset('')}}assets/images/panel-3.png" alt="image" />
                     </div>
 
                 </div>
@@ -480,22 +494,22 @@
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="ss-panel-rightimg">
-                    <img src="assets/images/panel-4.png" alt="image" />
+                    <img src="{{asset('')}}assets/images/panel-4.png" alt="image" />
                     <button class="ss-panel-shareicon" data-bs-toggle="modal" data-bs-target="#modalshare">
-                        <img src="assets/images/share-icon.png" alt="icon">
+                        <img src="{{asset('')}}assets/images/share-icon.png" alt="icon">
                     </button>
                 </div>
             </div>
         </div>
     </div>
     <div class="ss-bgshapes ss-panel-bgshape">
-        <img src="assets/images/panel-bgleft.png" alt="image">
-        <img src="assets/images/panel-bgright.png" alt="image">
+        <img src="{{asset('')}}assets/images/panel-bgleft.png" alt="image">
+        <img src="{{asset('')}}assets/images/panel-bgright.png" alt="image">
     </div>
 </div>
 <!------------- Solar-supplier Section End ----------->
 <!------------- New Product Section start ----------->
-<div class="ss-bgcover ss-product-sec">
+<!-- <div class="ss-bgcover ss-product-sec">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -510,7 +524,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss-product-box">
                     <div class="ss-product-img">
-                        <img src="assets/images/pro-1.png" alt="img">
+                        <img src="{{asset('')}}assets/images/pro-1.png" alt="img">
                         <span class="ss-pro-off">25% OFF</span>
                     </div>
                     <div class="ss-pro-text">
@@ -556,7 +570,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss-product-box">
                     <div class="ss-product-img">
-                        <img src="assets/images/pro-2.png" alt="img">
+                        <img src="{{asset('')}}assets/images/pro-2.png" alt="img">
                         <span class="ss-pro-off">25% OFF</span>
                     </div>
                     <div class="ss-pro-text">
@@ -602,7 +616,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss-product-box">
                     <div class="ss-product-img">
-                        <img src="assets/images/pro-3.png" alt="img">
+                        <img src="{{asset('')}}assets/images/pro-3.png" alt="img">
                         <span class="ss-pro-off">25% OFF</span>
                     </div>
                     <div class="ss-pro-text">
@@ -648,7 +662,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="ss-product-box">
                     <div class="ss-product-img">
-                        <img src="assets/images/pro-4.png" alt="img">
+                        <img src="{{asset('')}}assets/images/pro-4.png" alt="img">
                         <span class="ss-pro-off">25% OFF</span>
                     </div>
                     <div class="ss-pro-text">
@@ -698,14 +712,14 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!------------- New Product Section end ----------->
 <!------------- counter Section Start ----------->
-<div class="ss-bgcover ss-counter-sec">
+<!-- <div class="ss-bgcover ss-counter-sec">
     <div class="ss-counter-section">
         <div class="ss-counter-box">
             <div class="ss-counter-icon">
-                <img src="assets/images/co-icon1.png" alt="icon">
+                <img src="{{asset('')}}assets/images/co-icon1.png" alt="icon">
             </div>
             <div class="ss-couter-text">
                 <h2 class="ss-counting" data-to="48">48</h2>
@@ -714,7 +728,7 @@
         </div>
         <div class="ss-counter-box">
             <div class="ss-counter-icon">
-                <img src="assets/images/co-icon2.png" alt="icon">
+                <img src="{{asset('')}}assets/images/co-icon2.png" alt="icon">
             </div>
             <div class="ss-couter-text">
                 <h2 class="ss-counting" data-to="2886">2886</h2>
@@ -723,7 +737,7 @@
         </div>
         <div class="ss-counter-box">
             <div class="ss-counter-icon">
-                <img src="assets/images/co-icon3.png" alt="icon">
+                <img src="{{asset('')}}assets/images/co-icon3.png" alt="icon">
             </div>
             <div class="ss-couter-text">
                 <h2 class="ss-counting" data-to="2879">2879</h2>
@@ -732,7 +746,7 @@
         </div>
         <div class="ss-counter-box">
             <div class="ss-counter-icon">
-                <img src="assets/images/co-icon4.png" alt="icon">
+                <img src="{{asset('')}}assets/images/co-icon4.png" alt="icon">
             </div>
             <div class="ss-couter-text">
                 <h2 class="ss-counting" data-to="389">389</h2>
@@ -741,20 +755,20 @@
         </div>
     </div>
     <div class="ss-bgshapes ss-counter-bgshape">
-        <img src="assets/images/count-shape.png" alt="img" />
-        <img src="assets/images/count-shape.png" alt="img" />
-        <img src="assets/images/count-shape.png" alt="img" />
-        <img src="assets/images/count-shape.png" alt="img" />
+        <img src="{{asset('')}}assets/images/count-shape.png" alt="img" />
+        <img src="{{asset('')}}assets/images/count-shape.png" alt="img" />
+        <img src="{{asset('')}}assets/images/count-shape.png" alt="img" />
+        <img src="{{asset('')}}assets/images/count-shape.png" alt="img" />
     </div>
     <div class="ss-why-bgicon ss-coun-icon">
-        <img src="assets/images/coun-icon1.png" alt="icon">
-        <img src="assets/images/coun-icon2.png" alt="icon">
-        <img src="assets/images/coun-icon3.png" alt="icon">
+        <img src="{{asset('')}}assets/images/coun-icon1.png" alt="icon">
+        <img src="{{asset('')}}assets/images/coun-icon2.png" alt="icon">
+        <img src="{{asset('')}}assets/images/coun-icon3.png" alt="icon">
     </div>
-</div>
+</div> -->
 <!------------- counter Section end ----------->
 <!------------- Feedback Section start ----------->
-<div class="ss-bgcover ss-feedback-sec">
+<!-- <div class="ss-bgcover ss-feedback-sec">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -775,7 +789,7 @@
                                     <div class="ss-test-namesec">
                                         <div class="ss-testname-wrap">
                                             <div class="ss-testimg">
-                                                <img src="assets/images/test-img1.png" alt="image">
+                                                <img src="{{asset('')}}assets/images/test-img1.png" alt="image">
                                             </div>
                                             <div class="ss-testname">
                                                 <h3>Matthew Clark</h3>
@@ -805,7 +819,7 @@
                                     <div class="ss-test-namesec">
                                         <div class="ss-testname-wrap">
                                             <div class="ss-testimg">
-                                                <img src="assets/images/test-img2.png" alt="image">
+                                                <img src="{{asset('')}}assets/images/test-img2.png" alt="image">
                                             </div>
                                             <div class="ss-testname">
                                                 <h3>Paula Irving</h3>
@@ -835,7 +849,7 @@
                                     <div class="ss-test-namesec">
                                         <div class="ss-testname-wrap">
                                             <div class="ss-testimg">
-                                                <img src="assets/images/test-img1.png" alt="image">
+                                                <img src="{{asset('')}}assets/images/test-img1.png" alt="image">
                                             </div>
                                             <div class="ss-testname">
                                                 <h3>Matthew Clark</h3>
@@ -865,7 +879,7 @@
                                     <div class="ss-test-namesec">
                                         <div class="ss-testname-wrap">
                                             <div class="ss-testimg">
-                                                <img src="assets/images/test-img2.png" alt="image">
+                                                <img src="{{asset('')}}assets/images/test-img2.png" alt="image">
                                             </div>
                                             <div class="ss-testname">
                                                 <h3>Paula Irving</h3>
@@ -912,10 +926,10 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!------------- Feedback Section end ----------->
 <!------------- Pricing plan Section start ----------->
-<div class="ss-bgcover ss-pricing-sec">
+<!-- <div class="ss-bgcover ss-pricing-sec">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -942,28 +956,28 @@
                 <div class="ss-pricingbox-wrapper">
                     <h4>Basic</h4>
                     <div class="ss-price-img">
-                        <img src="assets/images/plan-img1.png" alt="icon">
+                        <img src="{{asset('')}}assets/images/plan-img1.png" alt="icon">
                     </div>
                     <h3 class="ss-price">$29 / Month</h3>
                     <ul class="ss-pricelist">
                         <li>
-                            <img src="assets/images/right-icon.png" alt="icon" />
+                            <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
                             <p>Free Service</p>
                         </li>
                         <li>
-                            <img src="assets/images/right-icon.png" alt="icon" />
+                            <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
                             <p>Open Circuit</p>
                         </li>
                         <li>
-                            <img src="assets/images/wrong-icon.png" alt="icon" />
+                            <img src="{{asset('')}}assets/images/wrong-icon.png" alt="icon" />
                             <p class="text-color">Power Watts-PMAX</p>
                         </li>
                         <li>
-                            <img src="assets/images/wrong-icon.png" alt="icon" />
+                            <img src="{{asset('')}}assets/images/wrong-icon.png" alt="icon" />
                             <p class="text-color">Output Tolerance-PMAX</p>
                         </li>
                         <li>
-                            <img src="assets/images/wrong-icon.png" alt="icon" />
+                            <img src="{{asset('')}}assets/images/wrong-icon.png" alt="icon" />
                             <p class="text-color">Maximum Power Voltage</p>
                         </li>
                     </ul>
@@ -976,28 +990,28 @@
                 <div class="ss-pricingbox-wrapper">
                     <h4>Standard</h4>
                     <div class="ss-price-img">
-                        <img src="assets/images/plan-img2.png" alt="icon">
+                        <img src="{{asset('')}}assets/images/plan-img2.png" alt="icon">
                     </div>
                     <h3 class="ss-price">$39 / Month</h3>
                     <ul class="ss-pricelist">
                         <li>
-                            <img src="assets/images/right-icon.png" alt="icon" />
+                            <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
                             <p>Free Service</p>
                         </li>
                         <li>
-                            <img src="assets/images/right-icon.png" alt="icon" />
+                            <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
                             <p>Open Circuit</p>
                         </li>
                         <li>
-                            <img src="assets/images/right-icon.png" alt="icon" />
+                            <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
                             <p>Power Watts-PMAX</p>
                         </li>
                         <li>
-                            <img src="assets/images/wrong-icon.png" alt="icon" />
+                            <img src="{{asset('')}}assets/images/wrong-icon.png" alt="icon" />
                             <p class="text-color">Output Tolerance-PMAX</p>
                         </li>
                         <li>
-                            <img src="assets/images/wrong-icon.png" alt="icon" />
+                            <img src="{{asset('')}}assets/images/wrong-icon.png" alt="icon" />
                             <p class="text-color">Maximum Power Voltage</p>
                         </li>
                     </ul>
@@ -1010,28 +1024,28 @@
                 <div class="ss-pricingbox-wrapper">
                     <h4>Advanced</h4>
                     <div class="ss-price-img">
-                        <img src="assets/images/plan-img3.png" alt="icon">
+                        <img src="{{asset('')}}assets/images/plan-img3.png" alt="icon">
                     </div>
                     <h3 class="ss-price">$59 / Month</h3>
                     <ul class="ss-pricelist">
                         <li>
-                            <img src="assets/images/right-icon.png" alt="icon" />
+                            <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
                             <p>Free Service</p>
                         </li>
                         <li>
-                            <img src="assets/images/right-icon.png" alt="icon" />
+                            <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
                             <p>Open Circuit</p>
                         </li>
                         <li>
-                            <img src="assets/images/right-icon.png" alt="icon" />
+                            <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
                             <p>Power Watts-PMAX</p>
                         </li>
                         <li>
-                            <img src="assets/images/right-icon.png" alt="icon" />
+                            <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
                             <p>Output Tolerance-PMAX</p>
                         </li>
                         <li>
-                            <img src="assets/images/right-icon.png" alt="icon" />
+                            <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
                             <p>Maximum Power Voltage</p>
                         </li>
                     </ul>
@@ -1042,10 +1056,10 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!------------- Pricing plan Section end ----------->
 <!------------- Blog Section start ----------->
-<div class="ss-bgcover ss-blog-sec">
+<!-- <div class="ss-bgcover ss-blog-sec">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -1061,7 +1075,7 @@
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="ss-blogimg-box">
                         <div class="ss-blogimg-img">
-                            <img src="assets/images/blog-img1.png" alt="image">
+                            <img src="{{asset('')}}assets/images/blog-img1.png" alt="image">
                             <div class="ss-blog-content-wrap">
                                 <div class="ss-blog-text">
                                     <div class="ss-usericon-sec">
@@ -1109,7 +1123,7 @@
                     <div class="ss-blog-right-sec">
                         <div class="ss-blog-box">
                             <div class="ss-blog-img">
-                                <img src="assets/images/blog-img2.png" alt="image">
+                                <img src="{{asset('')}}assets/images/blog-img2.png" alt="image">
                             </div>
                             <div class="ss-blog-text">
                                 <div class="ss-blog-date">
@@ -1148,7 +1162,7 @@
                         </div>
                         <div class="ss-blog-box">
                             <div class="ss-blog-img">
-                                <img src="assets/images/blog-img3.png" alt="image">
+                                <img src="{{asset('')}}assets/images/blog-img3.png" alt="image">
                             </div>
                             <div class="ss-blog-text">
                                 <div class="ss-blog-date">
@@ -1190,7 +1204,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!------------- Blog Section end ----------->
 <!------------- Newsletter Section start ----------->
 <div class="ss-bgcover ss-newsletter-sec">
@@ -1201,7 +1215,7 @@
                 <form method="" class="ss-form-sec">
                     <div class="ss-form-input">
                         <input type="email" class="form-control" placeholder="Enter Your Email" name="email">
-                        <img src="assets/images/subscribe-icon.svg" alt="icon" class="ss-form-icon">
+                        <img src="{{asset('')}}assets/images/subscribe-icon.svg" alt="icon" class="ss-form-icon">
                     </div>
                     <div class="ss-form-btn">
                         <button type="submit" class="ss-btn">Subscribe</a>
@@ -1211,7 +1225,7 @@
         </div>
     </div>
     <div class="ss-newsleft-img">
-        <img src="assets/images/news-leftimg.png" alt="image">
+        <img src="{{asset('')}}assets/images/news-leftimg.png" alt="image">
     </div>
 </div>
 <!------------- Newsletter Section start ----------->

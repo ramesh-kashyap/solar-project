@@ -1,223 +1,892 @@
-<!doctype html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<!DOCTYPE html>
+
+<html lang="zxx">
+
+<!-- Begin Head -->
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="csrf-token" content="zJQ7RwskMpdZv7xt1xcfg0rdSLr8EusWebPImXU3">
-    <title> {{siteName()}}</title>
+    <title>{{sitename()}}</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-family  -->
 
-    <meta name="title" Content="Xaxino - Login">
 
-    <meta name="description" content="Welcome to Xaxino - The ultimate casino platform! Join the fun and excitement of our extensive selection of games, including Head and tail, Spin Wheel, Number Guessing, Dice Rolling, Number Slot, and Casino Dice games. With top-notch security measures and 24/7 customer support, you can enjoy a safe and seamless gaming experience. Sign up today and get ready to win big!">
-    <meta name="keywords" content="live game,xaxino game,casino platform">
-    <link rel="shortcut icon" href="{{asset('')}}assets/images/logoIcon/favicon.png" type="image/x-icon">
+    <style type="text/css">
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 100;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/100/normal.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
 
-    
-    <link rel="apple-touch-icon" href="{{asset('')}}assets/images/logoIcon/logo.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Xaxino - Login">
-    
-    <meta itemprop="name" content="Xaxino - Login">
-    <meta itemprop="description" content="Welcome to Xaxino - The ultimate casino platform! Join the fun and excitement of our extensive selection of games, including Head and tail, Spin Wheel, Number Guessing, Dice Rolling, Number Slot, and Casino Dice games. With top-notch security measures and 24/7 customer support, you can enjoy a safe and seamless gaming experience. Sign up today and get ready to win big!">
-    <meta itemprop="image" content="https://script.viserlab.com/xaxino/demo/assets/images/seo/65af51737a1f51705988467.png">
-    
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Xaxino - Ultimate Casino Platform">
-    <meta property="og:description" content="Get ready for non-stop entertainment and big wins with Xaxino - Ultimate Casino Platform! Our platform offers various games, including Head and tail, Spin Wheel, Number Guessing, Dice Rolling, Number Slot, and Casino Dice games, and thrilling live dealer options. With seamless mobile compatibility, you can enjoy your favourite games anytime. Our friendly and knowledgeable customer support team is available 24/7 to ensure a smooth and enjoyable gaming experience. Join now and experience the excitement of our Casino Platform!">
-    <meta property="og:image" content="https://script.viserlab.com/xaxino/demo/assets/images/seo/65af51737a1f51705988467.png" />
-    <meta property="og:image:type" content="png" />
-    <meta property="og:image:width" content="1180" />
-    <meta property="og:image:height" content="600" />
-    <meta property="og:url" content="https://script.viserlab.com/xaxino/demo/user/login">
-    
-    <meta name="twitter:card" content="summary_large_image">
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 100;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/100/normal.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
 
-    <link href="{{asset('')}}assets/global/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{asset('')}}assets/global/css/all.min.css" rel="stylesheet">
-    <link href="{{asset('')}}assets/global/css/line-awesome.min.css" rel="stylesheet" />
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 100;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/100/normal.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
 
-    <link href="{{asset('')}}assets/global/css/lightcase.css" rel="stylesheet">
-    <link href="{{asset('')}}assets/templates/basic/css/animate.min.css" rel="stylesheet">
-    <link href="{{asset('')}}assets/templates/basic/css/slick.css" rel="stylesheet">
-    <link href="{{asset('')}}assets/templates/basic/css/main.css" rel="stylesheet">
-    <link href="{{asset('')}}assets/templates/basic/css/custom.css" rel="stylesheet">
-    <link href="{{asset('')}}assets/templates/basic/css/color.php%EF%B9%96color=E3BC3F.css" rel="stylesheet">
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 200;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/200/normal.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
 
-        </head>
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 200;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/200/normal.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 200;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/200/normal.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 300;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/300/normal.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 300;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/300/normal.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 300;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/300/normal.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 400;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/400/normal.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 400;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/400/normal.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 400;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/400/normal.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 500;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/500/normal.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 500;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/500/normal.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 500;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/500/normal.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 600;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/600/normal.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 600;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/600/normal.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 600;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/600/normal.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 700;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/700/normal.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 700;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/700/normal.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 700;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/700/normal.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 800;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/800/normal.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 800;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/800/normal.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 800;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/800/normal.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 900;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/900/normal.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 900;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/900/normal.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 900;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/900/normal.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 100;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/100/italic.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 100;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/100/italic.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 100;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/100/italic.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 200;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/200/italic.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 200;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/200/italic.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 200;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/200/italic.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 300;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/300/italic.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 300;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/300/italic.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 300;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/300/italic.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 400;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/400/italic.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 400;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/400/italic.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 400;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/400/italic.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 500;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/500/italic.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 500;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/500/italic.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 500;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/500/italic.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 600;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/600/italic.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 600;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/600/italic.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 600;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/600/italic.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 700;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/700/italic.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 700;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/700/italic.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 700;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/700/italic.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 800;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/800/italic.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 800;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/800/italic.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 800;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/800/italic.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 900;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/vietnamese/900/italic.woff2);
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 900;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin/900/italic.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Barlow;
+            font-style: italic;
+            font-weight: 900;
+            src: url(../../../../cf-fonts/s/barlow/5.0.11/latin-ext/900/italic.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 100;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin-ext/100/normal.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 100;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin/100/normal.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 300;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin/300/normal.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 300;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin-ext/300/normal.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 400;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin-ext/400/normal.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 400;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin/400/normal.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 700;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin-ext/700/normal.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 700;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin/700/normal.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 900;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin-ext/900/normal.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 900;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin/900/normal.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: italic;
+            font-weight: 100;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin/100/italic.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: italic;
+            font-weight: 100;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin-ext/100/italic.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: italic;
+            font-weight: 300;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin-ext/300/italic.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: italic;
+            font-weight: 300;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin/300/italic.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: italic;
+            font-weight: 400;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin/400/italic.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: italic;
+            font-weight: 400;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin-ext/400/italic.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: italic;
+            font-weight: 700;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin-ext/700/italic.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: italic;
+            font-weight: 700;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin/700/italic.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: italic;
+            font-weight: 900;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin-ext/900/italic.woff2);
+            unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: Lato;
+            font-style: italic;
+            font-weight: 900;
+            src: url(../../../../cf-fonts/s/lato/5.0.18/latin/900/italic.woff2);
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap;
+        }
+    </style>
+    <style>
+        /* ===== LOADER CSS ===== */
+        .ss-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ss-spin img {
+            width: 80px;
+            height: auto;
+        }
+    </style>
+    <!-- custom css link -->
+    <link rel="stylesheet" href="{{asset('')}}assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('')}}assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{asset('')}}assets/css/select2.min.css">
+    <link rel="stylesheet" href="{{asset('')}}assets/css/flatpickr.min.css">
+    <link rel="stylesheet" href="{{asset('')}}assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{asset('')}}assets/css/style.css">
+    <link rel="stylesheet" href="{{asset('')}}assets/css/responsive.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="{{asset('')}}assets/images/favicon.png">
+</head>
 
 <body>
-    
-    <div class="preloader">
-        <div class="preloader__inner">
-            <div class="preloader__thumb">
-                <img class="loaderLogo mt-3" src="{{asset('')}}assets/images/logoIcon/logo.png" alt="imge">
-                <img class="loadercircle" src="{{asset('')}}assets/templates/basic/images/preloader-dice.png" alt="image">
-            </div>
+    <!------------- Loader start ----------->
+    <div class="ss-loader">
+        <div class="ss-spin">
+            <img src="{{asset('')}}assets/images/loader.gif" alt="loader">
         </div>
     </div>
 
-    <div class="page-wrapper" id="main-scrollbar" data-scrollbar>
-
-                <section class="login-section bg_img" style="background-image: url( ../assets/images/frontend/login/6305e36cea4e31661330284.jpg );">
-        <div class="login-area">
-            <div class="login-area-inner">
-                <div class="text-center">
-                    <a class="site-logo mb-4" href="{{route('Index')}}">
-                        <img src="{{asset('')}}assets/images/logoIcon/LOGO1-min.png" alt="site-logo">
-                    </a>
-                    <h6 class="title mb-2"></h6>
-                </div>
-                <form  method="POST" action="{{route('forgot_submit')}}">
-                    {{ csrf_field() }}
 
 
+    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
 
-                    
-                                        <div class="form-group">
-                        <label>Enter Username </label>
-                        <div class="input-group">
-                            <div class="input-group-text"><i class="las la-user"></i></div>
-                            <input type="text" class="form-control" value="" name="username" required placeholder="username">
-                        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+
+
+            <form action="{{ route('forgot_submit') }}" method="POST" class="mx-auto" style="max-width: 500px;">
+
+                {{ csrf_field() }}
+
+                <!-- SweetAlert2 CDN -->
+
+                <div class="ss-contact-form">
+                    <div class="ss-logo text-center">
+                        <a href="{{route('Index')}}"><img src="{{asset('')}}assets/images/Logo.png"></a>
                     </div>
-                   
+                    <h3 class="ss-title text-center" style="margin: 30px 0;">Forgot Password</h3>
 
-                   
-
-                    <div class="mt-5">
-                        <button type="submit"  class="cmn-btn rounded-0 w-100">Submit</button>
-                        <div class="mt-20 d-flex flex-wrap justify-content-between">
-                                                            <p>Haven't an account? <a href="{{route('login')}}" class="text--base">login</a></p>
-                                                        
-                        </div>
+                    <div class="ss-form-input">
+                        <input type="text" name="username" class="form-control" placeholder="Enter Your Username">
                     </div>
-                </form>
+
+                  
+
+                    <div class="text-center mt-3">
+                        <button type="submit" class="ss-btn ss-con-btn">Submit</button>
+                    </div>
+                    <div class="ss-login-link text-center">
+                        <p>Don't have an account? <a href="{{ route('login') }}" style="color: green;">Sign In</a></p>
+                    </div>
+
+            </form>
+            @include('partials.notify')
+
+        </div>
+
+    </div>
+
+
+
+
+    <!------------- footer Section start ----------->
+    <div class="ss-footer-section">
+        <div class="container-fluid">
+
+
+        </div>
+    </div>
+    <!------------- footer Section end ----------->
+    <!------------- copyright Section start ----------->
+
+    <!------------- copyright Section end ----------->
+    <!------------- Modal-body Section end ----------->
+    <div class="modal fade ss-sharemodal" id="modalshare" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="false" aria-modal="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Share Us On</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="ss-modal-icon">
+                        <li><a href="javascript:void(0)">
+                                <span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.31742 6.77491L15.1457 0H13.7646L8.70389 5.88256L4.66193 0H0L6.11224 8.89547L0 16H1.3812L6.72542 9.78782L10.994 16H15.656L9.31709 6.77491H9.31742ZM7.42569 8.97384L6.80639 8.08805L1.87886 1.03974H4.00029L7.97687 6.72795L8.59617 7.61374L13.7652 15.0075H11.6438L7.42569 8.97418V8.97384Z"
+                                            fill="#8F8F8F" />
+                                    </svg>
+
+                                </span>
+                            </a></li>
+                        <li><a href="javascript:void(0)">
+                                <span class="">
+                                    <svg width="10" height="18" viewBox="0 0 10 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.06741 18V9.78996H8.82207L9.23536 6.58941H6.06741V4.54632C6.06741 3.61998 6.32359 2.98869 7.65347 2.98869L9.34686 2.98799V0.125307C9.05401 0.0872508 8.04877 0 6.87877 0C4.43564 0 2.76302 1.49127 2.76302 4.22934V6.58941H0V9.78996H2.76302V18H6.06741Z"
+                                            fill="#8F8F8F" />
+                                    </svg>
+
+                                </span>
+                            </a></li>
+                        <li><a href="javascript:void(0)"> <span>
+                                    <svg width="18" height="13" viewBox="0 0 18 13" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.6025 0H3.3975C1.5075 0 0 1.53 0 3.3975V9.45C0 11.34 1.53 12.8475 3.3975 12.8475H14.6025C16.4925 12.8475 18 11.3175 18 9.45V3.3975C18 1.53 16.47 0 14.6025 0ZM6.6375 9.2025V3.6675L11.3625 6.435L6.6375 9.2025Z"
+                                            fill="#8F8F8F" />
+                                    </svg>
+
+                                </span>
+                            </a></li>
+                        <li><a href="javascript:void(0)">
+                                <span class="svg-mt4">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M18 18V11.4075C18 8.1675 17.3025 5.6925 13.5225 5.6925C11.7 5.6925 10.485 6.6825 9.99 7.6275H9.945V5.985H6.3675V18H10.1025V12.0375C10.1025 10.4625 10.395 8.955 12.33 8.955C14.2425 8.955 14.265 10.7325 14.265 12.1275V17.9775H18V18ZM0.2925 5.985H4.0275V18H0.2925V5.985ZM2.16 0C0.9675 0 0 0.9675 0 2.16C0 3.3525 0.9675 4.3425 2.16 4.3425C3.3525 4.3425 4.32 3.3525 4.32 2.16C4.32 0.9675 3.3525 0 2.16 0Z"
+                                            fill="#8F8F8F" />
+                                    </svg>
+
+                                </span>
+                            </a></li>
+                        <li><a href="javascript:void(0)">
+                                <span class="svg-mt1">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.99981 5.69922C7.17821 5.69922 5.69861 7.17882 5.69861 9.00042C5.69861 10.822 7.17821 12.3052 8.99981 12.3052C10.8214 12.3052 12.3046 10.822 12.3046 9.00042C12.3046 7.17882 10.8214 5.69922 8.99981 5.69922Z"
+                                            fill="#8F8F8F" />
+                                        <path
+                                            d="M13.9824 0H4.0176C1.8036 0 0 1.8036 0 4.0176V13.9824C0 16.2 1.8036 18 4.0176 18H13.9824C16.2 18 18 16.2 18 13.9824V4.0176C18 1.8036 16.2 0 13.9824 0ZM9 14.832C5.7852 14.832 3.168 12.2148 3.168 9C3.168 5.7852 5.7852 3.1716 9 3.1716C12.2148 3.1716 14.832 5.7852 14.832 9C14.832 12.2148 12.2148 14.832 9 14.832ZM14.9544 4.23C14.274 4.23 13.7196 3.6792 13.7196 2.9988C13.7196 2.3184 14.274 1.764 14.9544 1.764C15.6348 1.764 16.1892 2.3184 16.1892 2.9988C16.1892 3.6792 15.6348 4.23 14.9544 4.23Z"
+                                            fill="#8F8F8F" />
+                                    </svg>
+
+                                </span>
+                            </a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </section>
-
     </div>
+    <!------------- Modal-body Section end ----------->
 
-    <div class="win-loss-popup">
-        <div class="win-loss-popup__bg">
-            <div class="win-loss-popup__inner">
-                <div class="win-loss-popup__body">
-                    <img class="img-glow lose d-none" src="{{asset('')}}assets/templates/basic/images/play/lose-message.png" alt="lose message image">
-                    <img class="img-glow win d-none" src="{{asset('')}}assets/templates/basic/images/play/win-message.png" alt="win message image">
-                </div>
-                <div class="win-loss-popup__footer">
-                    <h2 class="result-text">The result is <span class="data-result"></span></h2>
-                    <h5></h5>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- custom link  -->
+    <script src="{{asset('')}}assets/js/jquery.js" type="0b2f97e28051c8901cf0b4a3-text/javascript"></script>
+    <script src="{{asset('')}}assets/js/bootstrap.bundle.min.js" type="0b2f97e28051c8901cf0b4a3-text/javascript"></script>
+    <script src="{{asset('')}}assets/js/select2.min.js" type="0b2f97e28051c8901cf0b4a3-text/javascript"></script>
+    <script src="{{asset('')}}assets/js/SmoothScroll.min.js" type="0b2f97e28051c8901cf0b4a3-text/javascript"></script>
+    <script src="{{asset('')}}assets/js/flatpickr.js" type="0b2f97e28051c8901cf0b4a3-text/javascript"></script>
+    <script src="{{asset('')}}assets/js/vanilla-tilt.min.js" type="0b2f97e28051c8901cf0b4a3-text/javascript"></script>
+    <script src="{{asset('')}}assets/js/swiper-bundle.min.js" type="0b2f97e28051c8901cf0b4a3-text/javascript"></script>
+    <script src="{{asset('')}}assets/js/custom.js" type="0b2f97e28051c8901cf0b4a3-text/javascript"></script>
+    <script type="">
+        const popup = document.getElementById("popup");
+        const close = document.getElementById("close");
+        const videoPopup1 = document.getElementById("videopopup1");
 
-    <div class="scroll-to-top">
-        <span class="scroll-icon">
-            <i class="las la-arrow-up"></i>
-        </span>
-    </div>
-
-    
-           
-    
-    <script src="{{asset('')}}assets/global/js/jquery-3.6.0.min.js"></script>
-    <script src="{{asset('')}}assets/global/js/bootstrap.bundle.min.js"></script>
-
-    
-    <script>
-    (function($){
-            "use strict"
-            $('.verify-gcaptcha').on('submit',function(){
-                var response = grecaptcha.getResponse();
-                if (response.length == 0) {
-                    document.getElementById('g-recaptcha-error').innerHTML = '<span class="text-danger">Captcha field is required.</span>';
-                    return false;
-                }
-                return true;
-            });
-        })(jQuery);
-</script>
-
-    
-    <link href="{{asset('')}}assets/global/css/iziToast.min.css" rel="stylesheet">
-<script src="{{asset('')}}assets/global/js/iziToast.min.js"></script>
-
-<script>
-    "use strict";
-
-    function notify(status, message) {
-        if (typeof message == 'string') {
-            iziToast[status]({
-                message: message,
-                position: "topRight"
-            });
-        } else {
-            $.each(message, function(i, val) {
-                iziToast[status]({
-                    message: val,
-                    position: "topRight"
-                });
-            });
-        }
-    }
-</script>
-
-    <script src="{{asset('')}}assets/global/js/lightcase.js"></script>
-    <script src="{{asset('')}}assets/templates/basic/js/slick.min.js"></script>
-    <script src="{{asset('')}}assets/templates/basic/js/wow.min.js"></script>
-    <script src="{{asset('')}}assets/templates/basic/js/app.js"></script>
-
-    <script>
-        (function($) {
-            "use strict";
-            $(".langSel").on("change", function() {
-                window.location.href = "https://script.viserlab.com/xaxino/demo/change/" + $(this).val();
-            });
-
-            $('.policy').on('click', function() {
-                $.get('https://script.viserlab.com/xaxino/demo/cookie/accept', function(response) {
-                    $('.cookies-card').addClass('d-none');
-                });
-            });
-
-            setTimeout(function() {
-                $('.cookies-card').removeClass('hide')
-            }, 2000);
-
-            var inputElements = $('[type=text],[type=password],[type=email],[type=number],select,textarea');
-            $.each(inputElements, function(index, element) {
-                element = $(element);
-                element.closest('.form-group').find('label').attr('for', element.attr('name'));
-                element.attr('id', element.attr('name'))
-            });
-
-            $.each($('input, select, textarea'), function(i, element) {
-                var elementType = $(element);
-                if (elementType.attr('type') != 'checkbox') {
-                    if (element.hasAttribute('required')) {
-                        $(element).closest('.form-group').find('label').addClass('required');
-                    }
-                }
-            });
-
-            Array.from(document.querySelectorAll('table')).forEach(table => {
-                let heading = table.querySelectorAll('thead tr th');
-                Array.from(table.querySelectorAll('tbody tr')).forEach((row) => {
-                    Array.from(row.querySelectorAll('td')).forEach((colum, i) => {
-                        colum.setAttribute('data-label', heading[i].innerText)
-                    });
-                });
-            });
+        popup.addEventListener("click", () => {
+            videoPopup1.style.display = "block";
+            $('body').css("overflow", "hidden");
+        });
+        close.addEventListener("click", () => {
+            videoPopup1.style.display = "none";
+            $('body').css("overflow", "auto");
+        });
 
 
-        })(jQuery);
+    </script>
+    <!------------- Header Section End ----------->
+    <script data-cfasync="false">
+        window.addEventListener("load", function() {
+            var loader = document.querySelector(".ss-loader");
+            if (loader) {
+                loader.style.transition = "opacity 0.5s ease";
+                loader.style.opacity = "0";
+                setTimeout(function() {
+                    loader.style.display = "none";
+                }, 500);
+            }
+        });
     </script>
 
-</body>
-
 </html>
-@include('partials.notify')
+
+

@@ -10,7 +10,7 @@
                             <h2>Contact</h2>
                             <div class="ss-bread-list">
                                 <span>
-                                    <a href="{{route('home')}}">Home</a>
+                                    <a href="{{route('Index')}}">Home</a>
                                 </span>
                                 <span class="ss-active-page">Contact</span>
                             </div>
@@ -33,7 +33,6 @@
                         <div class="ss-contact-text">
                             <h4>Contact Us</h4>
                             <p>+1-202-555-0101</p>
-                            <p>+1-202-555-0101</p>
                         </div>
                     </div>
                 </div>
@@ -44,8 +43,7 @@
                         </div>
                         <div class="ss-contact-text">
                             <h4>Email Us</h4>
-                            <p><a href="https://kamleshyadav.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e2879a838f928e87a2858f838b8ecc818d8f">[email&#160;protected]</a></p>
-                            <p><a href="https://kamleshyadav.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0f666169604f68626e6663216c6062">[email&#160;protected]</a></p>
+                            <p><a href="mailto:info@gmail.com" class="__cf_email__" data-cfemail="">info@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -56,7 +54,7 @@
                         </div>
                         <div class="ss-contact-text">
                             <h4>Address</h4>
-                            <p>2972 Westheimer Rd. Santa Ana, <br> Illinois 85486</p>
+                            <p>XYZ, <br> India</p>
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,7 @@
                         <h2>About</h2>
                         <div class="ss-bread-list">
                             <span>
-                                <a href="index.html">Home</a>
+                                <a href="{{route('Index')}}">Home</a>
                             </span>
                             <span class="ss-active-page">About</span>
                         </div>
@@ -21,7 +21,7 @@
 </div>
 <!------------- Breadcrumb Section end ----------->
 <!------------- Dummy-logo Section start ----------->
-<div class="ss-logo-slider-wrapper ss-inner-logosec">
+<!-- <div class="ss-logo-slider-wrapper ss-inner-logosec">
     <div class="container-fluid">
         <div class="ss-logo-slider-sec">
             <div class="swiper ss-logo-slider">
@@ -150,7 +150,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!------------- Dummy-logo Section end ----------->
 <!------------- About Section start ----------->
 <div class="ss-bgcover ss-about-sec">
@@ -167,36 +167,53 @@
                     <h5>About us</h5>
                     <h3>We Are Here To Give You The Best Solar Panel For Your Home</h3>
                     <div class="bottom-line"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur. Ultrices dictum interdum a commodo molestie posuere eu lobortis. Nunc semper lectus velit nisl facilisis blandit. Purus proin in commodo elementum. Nam pretium posuere tempus mattis at. Cursus sed gravida viverra enim ipsum velit adipiscing molestie. Donec velit consequat maecenas rhoncus mauris sit faucibus in sagittis. Egestas proin in pharetra vitae convallis in luctus.</p>
+                    <p>We are a trusted renewable energy solutions provider, committed to delivering high-quality solar and green energy products. Our goal is to help homes and businesses switch to clean, affordable, and sustainable power while reducing electricity costs and carbon footprint.</p>
                 </div>
                 <div class="ss-about-list-wrap">
+
                     <div class="ss-about-list">
                         <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>
+
+                            Expert Solar Solutions </p>
+
                     </div>
                     <div class="ss-about-list">
                         <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>
+                            High-Quality Products
+                        </p>
                     </div>
                     <div class="ss-about-list">
                         <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>
+                            Cost-Effective Energy
+                        </p>
                     </div>
                     <div class="ss-about-list">
                         <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>
+                            Eco-Friendly Approach </p>
                     </div>
                     <div class="ss-about-list">
                         <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>
+                            Professional Installation
+
+                        </p>
                     </div>
                     <div class="ss-about-list">
                         <img src="{{asset('')}}assets/images/right-icon.png" alt="icon" />
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p>
+                            After-Sales Support
+
+                        </p>
                     </div>
                 </div>
+
+
                 <div class="ss-about-btn">
-                    <a href="about.html" class="ss-btn">Read More</a>
+                    <a href="{{route('about-us')}}" class="ss-btn">Read More</a>
                 </div>
             </div>
         </div>
@@ -227,8 +244,8 @@
                     </div>
                     <div class="ss-solar-text">
                         <h3>Wind Generators</h3>
-                        <p>In publishing and graphic design, ipsum is a placeholder text commonly used to
-                            ipsum is a placeholder text commonly the visual form of a document.</p>
+                        <p>Wind generators use natural wind power to produce clean and renewable electricity.
+                            They are an efficient solution for reducing dependency on traditional power sources.</p>
                     </div>
                 </div>
                 <div class="ss-solar-box ss-why-box">
@@ -237,12 +254,12 @@
                     </div>
                     <div class="ss-solar-text">
                         <h3>Always Clean Energy</h3>
-                        <p>In publishing and graphic design, ipsum is a placeholder text commonly used to
-                            ipsum is a placeholder text commonly the visual form of a document.</p>
+                        <p>Clean energy reduces pollution and protects the environment for future generations.
+                            It provides sustainable power without harming nature or increasing carbon emissions.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="col-lg-4 col-md-12 col-sm-12 p-0">
                 <div class="ss-why-centerimg">
                     <img src="{{asset('')}}assets/images/center_img.png" alt="image" />
                 </div>
@@ -254,8 +271,8 @@
                     </div>
                     <div class="ss-solar-text">
                         <h3>Energy Can Be Reused</h3>
-                        <p>In publishing and graphic design, ipsum is a placeholder text commonly used to
-                            ipsum is a placeholder text commonly the visual form of a document.</p>
+                        <p>Renewable energy sources can be reused again and again without depletion.
+                            This ensures long-term energy availability and cost savings.</p>
                     </div>
                 </div>
                 <div class="ss-solar-box ss-why-box">
@@ -264,8 +281,8 @@
                     </div>
                     <div class="ss-solar-text">
                         <h3>Easy Installation</h3>
-                        <p>In publishing and graphic design, ipsum is a placeholder text commonly used to
-                            ipsum is a placeholder text commonly the visual form of a document.</p>
+                        <p>Our systems are designed for quick and hassle-free installation.
+                            They require minimal maintenance while delivering reliable performance.</p>
                     </div>
                 </div>
             </div>
@@ -287,10 +304,14 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="ss-heading-wrap ss-panel-heading">
-                    <h5>Solar Panel Supplier</h5>
+                    <h5>Trusted Solar Solutions</h5>
                     <h3>Light Up With Your Solar & Save Natural Resource</h3>
                     <div class="bottom-line"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur. Ultrices dictum interdum a commodo molestie posuere eu lobortis. Nunc semper lectus velit nisl facilisis blandit. Purus proin in commodo elementum. Nam pretium posuere tempus mattis at. Cursus sed gravida viverra enim ipsum velit adipiscing molestie. Donec velit consequat maecenas rhoncus mauris sit faucibus in sagittis. Egestas proin in pharetra vitae convallis in luctus.</p>
+                    <p>Harness the power of the sun with reliable and eco-friendly solar solutions.
+                        Our systems help you reduce energy costs while protecting valuable natural resources.
+                        We provide high-quality solar installations designed for long-term performance.
+                        Our expert team ensures smooth installation and dependable after-sales support.
+                        Switch to clean energy today and power your future with confidence.</p>
                 </div>
                 <div class="ss-panelimg-sec">
                     <div class="ss-pannel-img popup">
@@ -304,13 +325,15 @@
                         <div id="videopopup1" class="ss-videopopup">
                             <div class="ss-videopopup-content">
                                 <span class="close" id="close">×</span>
-                                <iframe src="https://www.youtube.com/embed/hJTmi9euoNg" frameborder="0" allowfullscreen=""></iframe>
+                                <iframe src="https://www.youtube.com/embed/hJTmi9euoNg" frameborder="0"
+                                    allowfullscreen=""></iframe>
                             </div>
                         </div>
                     </div>
                     <div class="ss-pannel-img popup">
                         <img src="{{asset('')}}assets/images/panel-3.png" alt="image" />
                     </div>
+
                 </div>
                 <div class="popup-imgshow">
                     <div class="overlay">
@@ -337,192 +360,8 @@
     </div>
 </div>
 <!------------- Solar-supplier Section End ----------->
-<!------------- Feedback Section start ----------->
-<div class="ss-bgcover ss-feedback-sec ss-feedback-sing">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="ss-heading-wrap ss-feedback-head">
-                    <h5>Feedback</h5>
-                    <h3>What Our Client Says</h3>
-                    <div class="bottom-line"></div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="ss-testimonial-section">
-                    <div class="swiper ss-testimonial-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="ss-test-box">
-                                    <div class="ss-test-namesec">
-                                        <div class="ss-testname-wrap">
-                                            <div class="ss-testimg">
-                                                <img src="{{asset('')}}assets/images/test-img1.png" alt="image">
-                                            </div>
-                                            <div class="ss-testname">
-                                                <h3>Matthew Clark</h3>
-                                                <p>Delivery Head</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ss-test-text">
-                                        <p>Lorem ipsum dolor sit amet consectetur. Ultrices dictum interdum a commodo molestie posuere eu lobortis. Nunc semper lectus velit nisl facilisis blandit. Purus proin in commodo elementum. Nam pretium posuere tempus mattis at. Cursus sed gravida viverra enim ipsum velit adipiscing molestie.</p>
-                                    </div>
-                                    <div class="ss-testquote">
-                                        <svg width="57" height="51" viewBox="0 0 57 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path opacity="0.05" d="M38.757 23.1856C40.1609 22.761 41.5647 22.5456 42.9303 22.5456C45.0391 22.5456 46.7988 23.0518 48.1632 23.6716C46.8478 18.6136 43.6879 9.88593 37.3932 8.90307C37.1078 8.85844 36.8407 8.72802 36.6243 8.52755C36.4079 8.32708 36.2513 8.06511 36.1735 7.77326L34.7977 2.60463C34.7402 2.3887 34.7274 2.16235 34.7602 1.94079C34.793 1.71924 34.8705 1.50763 34.9877 1.3202C35.1048 1.13277 35.2588 0.973872 35.4393 0.854191C35.6198 0.73451 35.8227 0.656825 36.0341 0.626362C36.5006 0.559604 36.9708 0.526033 37.4416 0.525879C44.9973 0.525879 52.48 8.80949 55.6375 20.6703C57.491 27.6288 58.0345 38.0904 53.469 44.6752C50.9141 48.3598 47.1868 50.3274 42.3904 50.524L42.3318 50.5252C36.4138 50.5252 31.166 46.3389 29.5696 40.3456C29.0959 38.5849 28.9594 36.743 29.1679 34.9264C29.3765 33.1099 29.926 31.3548 30.7846 29.7628C32.5035 26.5568 35.3346 24.2199 38.757 23.1856ZM1.71158 29.7635C3.43055 26.5568 6.26161 24.2199 9.684 23.1856C11.0879 22.761 12.4918 22.5456 13.8568 22.5456C15.6563 22.5399 17.4377 22.9232 19.0902 23.6716C17.7748 18.6136 14.6149 9.88593 8.31959 8.90307C8.03423 8.85829 7.76728 8.72782 7.55088 8.52737C7.33448 8.32692 7.17786 8.06504 7.09987 7.77326L5.7241 2.60463C5.66662 2.3887 5.65384 2.16235 5.68661 1.94079C5.71939 1.71924 5.79696 1.50763 5.9141 1.3202C6.03125 1.13277 6.18526 0.973872 6.36576 0.854191C6.54627 0.73451 6.74908 0.656825 6.96056 0.626362C7.42702 0.559562 7.89725 0.525991 8.36802 0.525879C15.9237 0.525879 23.4065 8.80949 26.5646 20.6703C28.4175 27.6288 28.961 38.0904 24.3948 44.6765C21.8405 48.3605 18.1126 50.3287 13.3169 50.5246L13.2577 50.5259C7.34023 50.5259 2.09185 46.3395 0.495449 40.3463C0.0223541 38.5854 -0.113758 36.7435 0.0949821 34.927C0.303722 33.1105 0.853176 31.3555 1.71158 29.7635Z" fill="white" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="ss-test-box">
-                                    <div class="ss-test-namesec">
-                                        <div class="ss-testname-wrap">
-                                            <div class="ss-testimg">
-                                                <img src="{{asset('')}}assets/images/test-img2.png" alt="image">
-                                            </div>
-                                            <div class="ss-testname">
-                                                <h3>Paula Irving</h3>
-                                                <p>Chief Operating Officer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ss-test-text">
-                                        <p>Lorem ipsum dolor sit amet consectetur. Ultrices dictum interdum a commodo molestie posuere eu lobortis. Nunc semper lectus velit nisl facilisis blandit. Purus proin in commodo elementum. Nam pretium posuere tempus mattis at. Cursus sed gravida viverra enim ipsum velit adipiscing molestie.</p>
-                                    </div>
-                                    <div class="ss-testquote">
-                                        <svg width="57" height="51" viewBox="0 0 57 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path opacity="0.05" d="M38.757 23.1856C40.1609 22.761 41.5647 22.5456 42.9303 22.5456C45.0391 22.5456 46.7988 23.0518 48.1632 23.6716C46.8478 18.6136 43.6879 9.88593 37.3932 8.90307C37.1078 8.85844 36.8407 8.72802 36.6243 8.52755C36.4079 8.32708 36.2513 8.06511 36.1735 7.77326L34.7977 2.60463C34.7402 2.3887 34.7274 2.16235 34.7602 1.94079C34.793 1.71924 34.8705 1.50763 34.9877 1.3202C35.1048 1.13277 35.2588 0.973872 35.4393 0.854191C35.6198 0.73451 35.8227 0.656825 36.0341 0.626362C36.5006 0.559604 36.9708 0.526033 37.4416 0.525879C44.9973 0.525879 52.48 8.80949 55.6375 20.6703C57.491 27.6288 58.0345 38.0904 53.469 44.6752C50.9141 48.3598 47.1868 50.3274 42.3904 50.524L42.3318 50.5252C36.4138 50.5252 31.166 46.3389 29.5696 40.3456C29.0959 38.5849 28.9594 36.743 29.1679 34.9264C29.3765 33.1099 29.926 31.3548 30.7846 29.7628C32.5035 26.5568 35.3346 24.2199 38.757 23.1856ZM1.71158 29.7635C3.43055 26.5568 6.26161 24.2199 9.684 23.1856C11.0879 22.761 12.4918 22.5456 13.8568 22.5456C15.6563 22.5399 17.4377 22.9232 19.0902 23.6716C17.7748 18.6136 14.6149 9.88593 8.31959 8.90307C8.03423 8.85829 7.76728 8.72782 7.55088 8.52737C7.33448 8.32692 7.17786 8.06504 7.09987 7.77326L5.7241 2.60463C5.66662 2.3887 5.65384 2.16235 5.68661 1.94079C5.71939 1.71924 5.79696 1.50763 5.9141 1.3202C6.03125 1.13277 6.18526 0.973872 6.36576 0.854191C6.54627 0.73451 6.74908 0.656825 6.96056 0.626362C7.42702 0.559562 7.89725 0.525991 8.36802 0.525879C15.9237 0.525879 23.4065 8.80949 26.5646 20.6703C28.4175 27.6288 28.961 38.0904 24.3948 44.6765C21.8405 48.3605 18.1126 50.3287 13.3169 50.5246L13.2577 50.5259C7.34023 50.5259 2.09185 46.3395 0.495449 40.3463C0.0223541 38.5854 -0.113758 36.7435 0.0949821 34.927C0.303722 33.1105 0.853176 31.3555 1.71158 29.7635Z" fill="white" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="ss-test-box">
-                                    <div class="ss-test-namesec">
-                                        <div class="ss-testname-wrap">
-                                            <div class="ss-testimg">
-                                                <img src="{{asset('')}}assets/images/test-img1.png" alt="image">
-                                            </div>
-                                            <div class="ss-testname">
-                                                <h3>Matthew Clark</h3>
-                                                <p>Delivery Head</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ss-test-text">
-                                        <p>Lorem ipsum dolor sit amet consectetur. Ultrices dictum interdum a commodo molestie posuere eu lobortis. Nunc semper lectus velit nisl facilisis blandit. Purus proin in commodo elementum. Nam pretium posuere tempus mattis at. Cursus sed gravida viverra enim ipsum velit adipiscing molestie.</p>
-                                    </div>
-                                    <div class="ss-testquote">
-                                        <svg width="57" height="51" viewBox="0 0 57 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path opacity="0.05" d="M38.757 23.1856C40.1609 22.761 41.5647 22.5456 42.9303 22.5456C45.0391 22.5456 46.7988 23.0518 48.1632 23.6716C46.8478 18.6136 43.6879 9.88593 37.3932 8.90307C37.1078 8.85844 36.8407 8.72802 36.6243 8.52755C36.4079 8.32708 36.2513 8.06511 36.1735 7.77326L34.7977 2.60463C34.7402 2.3887 34.7274 2.16235 34.7602 1.94079C34.793 1.71924 34.8705 1.50763 34.9877 1.3202C35.1048 1.13277 35.2588 0.973872 35.4393 0.854191C35.6198 0.73451 35.8227 0.656825 36.0341 0.626362C36.5006 0.559604 36.9708 0.526033 37.4416 0.525879C44.9973 0.525879 52.48 8.80949 55.6375 20.6703C57.491 27.6288 58.0345 38.0904 53.469 44.6752C50.9141 48.3598 47.1868 50.3274 42.3904 50.524L42.3318 50.5252C36.4138 50.5252 31.166 46.3389 29.5696 40.3456C29.0959 38.5849 28.9594 36.743 29.1679 34.9264C29.3765 33.1099 29.926 31.3548 30.7846 29.7628C32.5035 26.5568 35.3346 24.2199 38.757 23.1856ZM1.71158 29.7635C3.43055 26.5568 6.26161 24.2199 9.684 23.1856C11.0879 22.761 12.4918 22.5456 13.8568 22.5456C15.6563 22.5399 17.4377 22.9232 19.0902 23.6716C17.7748 18.6136 14.6149 9.88593 8.31959 8.90307C8.03423 8.85829 7.76728 8.72782 7.55088 8.52737C7.33448 8.32692 7.17786 8.06504 7.09987 7.77326L5.7241 2.60463C5.66662 2.3887 5.65384 2.16235 5.68661 1.94079C5.71939 1.71924 5.79696 1.50763 5.9141 1.3202C6.03125 1.13277 6.18526 0.973872 6.36576 0.854191C6.54627 0.73451 6.74908 0.656825 6.96056 0.626362C7.42702 0.559562 7.89725 0.525991 8.36802 0.525879C15.9237 0.525879 23.4065 8.80949 26.5646 20.6703C28.4175 27.6288 28.961 38.0904 24.3948 44.6765C21.8405 48.3605 18.1126 50.3287 13.3169 50.5246L13.2577 50.5259C7.34023 50.5259 2.09185 46.3395 0.495449 40.3463C0.0223541 38.5854 -0.113758 36.7435 0.0949821 34.927C0.303722 33.1105 0.853176 31.3555 1.71158 29.7635Z" fill="white" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="ss-test-box">
-                                    <div class="ss-test-namesec">
-                                        <div class="ss-testname-wrap">
-                                            <div class="ss-testimg">
-                                                <img src="{{asset('')}}assets/images/test-img2.png" alt="image">
-                                            </div>
-                                            <div class="ss-testname">
-                                                <h3>Paula Irving</h3>
-                                                <p>Chief Operating Officer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ss-test-text">
-                                        <p>Lorem ipsum dolor sit amet consectetur. Ultrices dictum interdum a commodo molestie posuere eu lobortis. Nunc semper lectus velit nisl facilisis blandit. Purus proin in commodo elementum. Nam pretium posuere tempus mattis at. Cursus sed gravida viverra enim ipsum velit adipiscing molestie.</p>
-                                    </div>
-                                    <div class="ss-testquote">
-                                        <svg width="57" height="51" viewBox="0 0 57 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path opacity="0.05" d="M38.757 23.1856C40.1609 22.761 41.5647 22.5456 42.9303 22.5456C45.0391 22.5456 46.7988 23.0518 48.1632 23.6716C46.8478 18.6136 43.6879 9.88593 37.3932 8.90307C37.1078 8.85844 36.8407 8.72802 36.6243 8.52755C36.4079 8.32708 36.2513 8.06511 36.1735 7.77326L34.7977 2.60463C34.7402 2.3887 34.7274 2.16235 34.7602 1.94079C34.793 1.71924 34.8705 1.50763 34.9877 1.3202C35.1048 1.13277 35.2588 0.973872 35.4393 0.854191C35.6198 0.73451 35.8227 0.656825 36.0341 0.626362C36.5006 0.559604 36.9708 0.526033 37.4416 0.525879C44.9973 0.525879 52.48 8.80949 55.6375 20.6703C57.491 27.6288 58.0345 38.0904 53.469 44.6752C50.9141 48.3598 47.1868 50.3274 42.3904 50.524L42.3318 50.5252C36.4138 50.5252 31.166 46.3389 29.5696 40.3456C29.0959 38.5849 28.9594 36.743 29.1679 34.9264C29.3765 33.1099 29.926 31.3548 30.7846 29.7628C32.5035 26.5568 35.3346 24.2199 38.757 23.1856ZM1.71158 29.7635C3.43055 26.5568 6.26161 24.2199 9.684 23.1856C11.0879 22.761 12.4918 22.5456 13.8568 22.5456C15.6563 22.5399 17.4377 22.9232 19.0902 23.6716C17.7748 18.6136 14.6149 9.88593 8.31959 8.90307C8.03423 8.85829 7.76728 8.72782 7.55088 8.52737C7.33448 8.32692 7.17786 8.06504 7.09987 7.77326L5.7241 2.60463C5.66662 2.3887 5.65384 2.16235 5.68661 1.94079C5.71939 1.71924 5.79696 1.50763 5.9141 1.3202C6.03125 1.13277 6.18526 0.973872 6.36576 0.854191C6.54627 0.73451 6.74908 0.656825 6.96056 0.626362C7.42702 0.559562 7.89725 0.525991 8.36802 0.525879C15.9237 0.525879 23.4065 8.80949 26.5646 20.6703C28.4175 27.6288 28.961 38.0904 24.3948 44.6765C21.8405 48.3605 18.1126 50.3287 13.3169 50.5246L13.2577 50.5259C7.34023 50.5259 2.09185 46.3395 0.495449 40.3463C0.0223541 38.5854 -0.113758 36.7435 0.0949821 34.927C0.303722 33.1105 0.853176 31.3555 1.71158 29.7635Z" fill="white" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M-0.00897316 7.00409C-0.00973421 6.87249 0.0154909 6.74202 0.0652556 6.62019C0.11502 6.49835 0.188345 6.38753 0.281026 6.29409L6.28103 0.294092C6.46933 0.105788 6.72472 1.66592e-07 6.99103 1.31671e-07C7.25733 9.67495e-08 7.51272 0.105788 7.70103 0.294092C7.88933 0.482395 7.99512 0.73779 7.99512 1.00409C7.99512 1.27039 7.88933 1.52579 7.70103 1.71409L2.40103 7.00409L7.69103 12.2941C7.85485 12.4854 7.94046 12.7315 7.93074 12.9831C7.92102 13.2348 7.81668 13.4736 7.63859 13.6517C7.4605 13.8298 7.22176 13.9341 6.97008 13.9438C6.7184 13.9535 6.47233 13.8679 6.28103 13.7041L0.281026 7.70409C0.096282 7.51783 -0.00786877 7.26643 -0.00897316 7.00409Z" fill="white" />
-                        </svg>
-                    </div>
-                    <div class="swiper-button-next">
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.00897 6.99591C8.00973 7.12751 7.98451 7.25798 7.93474 7.37981C7.88498 7.50165 7.81165 7.61247 7.71897 7.70591L1.71897 13.7059C1.53067 13.8942 1.27528 14 1.00897 14C0.742673 14 0.487278 13.8942 0.298974 13.7059C0.110671 13.5176 0.00488265 13.2622 0.00488259 12.9959C0.00488253 12.7296 0.11067 12.4742 0.298974 12.2859L5.59897 6.99591L0.308972 1.70591C0.145146 1.51461 0.059539 1.26853 0.0692601 1.01686C0.0789812 0.76518 0.183314 0.52644 0.361409 0.348345C0.539503 0.17025 0.778242 0.0659188 1.02992 0.0561979C1.28159 0.046477 1.52767 0.132082 1.71897 0.295908L7.71897 6.29591C7.90372 6.48217 8.00787 6.73357 8.00897 6.99591Z" fill="white" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="ss-bgshapes ss-feedback-bgshape">
-        <img src="{{asset('')}}assets/images/feedback-bgshapes.png" alt="image">
-    </div>
-</div>
-<!------------- Feedback Section end ----------->
-<!------------- Team Section start ----------->
-<div class="ss-bgcover ss-team-section">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-lg-4 col-md-12 col-sm-12">
-                <div class="ss-heading-wrap ss-team-heading">
-                    <h5>Our Experts</h5>
-                    <h3>More about our Special Team</h3>
-                    <div class="bottom-line"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur. Ultrices dictum interdum a commodo molestie posuere eu lobortis. Nunc semper lectus velit nisl facilisis blandit. Purus proin in commodo elementum. Nam pretium posuere tempus mattis at. Cursus sed gravida viverra enim ipsum velit adipiscing molestie. Donec velit consequat maecenas rhoncus mauris sit faucibus in sagittis. Egestas proin in pharetra vitae convallis in luctus.</p>
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-12 col-sm-12">
-                <div class="ss-team-imgsec">
-                    <div class="ss-team-sec">
-                        <div class="ss-team-img">
-                            <img src="{{asset('')}}assets/images/team-1.jpg" alt="img">
-                        </div>
-                        <div class="ss-team-text">
-                            <h3>James Dannan</h3>
-                            <p>Technical Director</p>
-                        </div>
-                    </div>
-                    <div class="ss-team-sec">
-                        <div class="ss-team-img">
-                            <img src="{{asset('')}}assets/images/team-2.jpg" alt="img">
-                        </div>
-                        <div class="ss-team-text">
-                            <h3>Amy Walker</h3>
-                            <p>Consultant</p>
-                        </div>
-                    </div>
-                    <div class="ss-team-sec">
-                        <div class="ss-team-img">
-                            <img src="{{asset('')}}assets/images/team-3.jpg" alt="img">
-                        </div>
-                        <div class="ss-team-text">
-                            <h3>Henry Jones</h3>
-                            <p>Engineer</p>
-                        </div>
-                    </div>
-                    <div class="ss-team-sec">
-                        <div class="ss-team-img">
-                            <img src="{{asset('')}}assets/images/team-4.jpg" alt="img">
-                        </div>
-                        <div class="ss-team-text">
-                            <h3>David Green</h3>
-                            <p>Construction Supervision</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!------------- Team Section end ----------->
+
+
 <!------------- Newsletter Section start ----------->
 <div class="ss-bgcover ss-newsletter-sec">
     <div class="ss-newsletter-formsec">

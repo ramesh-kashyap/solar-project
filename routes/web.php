@@ -224,8 +224,8 @@ Route::get('user-activation', [App\Http\Controllers\Admin\UserController::class,
 Route::get('pool-bonus', [App\Http\Controllers\Admin\BonusController::class, 'roi_bonus'])->name('admin.pool-bonus');
 Route::get('level-bonus', [App\Http\Controllers\Admin\BonusController::class, 'level_bonus'])->name('admin.level-bonus');
 Route::get('rank-bonus', [App\Http\Controllers\Admin\BonusController::class, 'sponsor_bonus'])->name('admin.rank-bonus');
-Route::get('special-direct-income', [App\Http\Controllers\Admin\BonusController::class, 'special_direct_bonus'])->name('admin.special-direct-income');
-Route::get('reward-bonus', [App\Http\Controllers\Admin\BonusController::class, 'reward_bonus'])->name('admin.reward-bonus');
+Route::get('direct-income', [App\Http\Controllers\Admin\BonusController::class, 'special_direct_bonus'])->name('admin.direct-income');
+Route::get('reward-bonus', [App\Http\Controllers\Admin\BonusController::class, 'reward_bonus'])->name('admin.reward-bonus');  
 Route::get('weekly-bonus', [App\Http\Controllers\Admin\BonusController::class, 'weekly_bonus'])->name('admin.weekly-bonus');
 
 
