@@ -114,7 +114,7 @@ class BonusController extends Controller
            $limit = $request->limit ? $request->limit :  paginationLimit();
             $status = $request->status ? $request->status : null;
             $search = $request->search ? $request->search : null;
-            $notes = Income::where('remarks','Monthly Royalty')->orderBy('id', 'DESC');
+            $notes = Income::where('remarks','Reward Income')->orderBy('id', 'DESC');
            if($search <> null && $request->reset!="Reset"){
             $notes = $notes->where(function($q) use($search){
               $q->Where('rname', 'LIKE', '%' . $search . '%')
@@ -145,7 +145,7 @@ class BonusController extends Controller
            $limit = $request->limit ? $request->limit :  paginationLimit();
             $status = $request->status ? $request->status : null;
             $search = $request->search ? $request->search : null;
-            $notes = Income::where('remarks','Super Referral Income')->orderBy('id', 'DESC');
+            $notes = Income::where('remarks','Direct Income')->orderBy('id', 'DESC');
            if($search <> null && $request->reset!="Reset"){
             $notes = $notes->where(function($q) use($search){
               $q->Where('rname', 'LIKE', '%' . $search . '%')

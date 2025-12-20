@@ -155,8 +155,8 @@
 								<div class="card">
 									<div class="card-body d-flex align-items-center justify-content-between">
 										<div class="menu">
-											<span class="font-w500 fs-16 d-block mb-2">Rank  & Reward Income</span>
-											<h2>{{currency()}}{{  number_format((\App\Models\Income::where('remarks','Rank Income')->sum('comm')),2)   }}</h2>
+											<span class="font-w500 fs-16 d-block mb-2">Reward Income</span>
+											<h2>{{currency()}}{{  number_format((\App\Models\Income::where('remarks','Reward Income')->sum('comm')),2)   }}</h2>
 										</div>	
 										<div class="d-inline-block position-relative donut-chart-sale">
 										
@@ -172,8 +172,8 @@
 								<div class="card">
 									<div class="card-body d-flex align-items-center justify-content-between">
 										<div class="menu">
-											<span class="font-w500 fs-16 d-block mb-2"> Auto Pool Income</span>
-											<h2>{{currency()}}{{  number_format((\App\Models\Income::where('remarks','Pool Income')->sum('comm')),2)   }}</h2>
+											<span class="font-w500 fs-16 d-block mb-2"> Direct Income</span>
+											<h2>{{currency()}}{{  number_format((\App\Models\Income::where('remarks','Direct Income')->sum('comm')),2)   }}</h2>
 										</div>	
 										<div class="d-inline-block position-relative donut-chart-sale">
 											
