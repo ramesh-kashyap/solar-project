@@ -70,20 +70,20 @@ class User extends Authenticatable
 
    
 
-    public function roi_bonus()
+    public function franchise_bonus()
     {
-        return $this->hasMany('App\Models\Income','user_id','id')->where('remarks','Gaming Profit Income');
+        return $this->hasMany('App\Models\Income','user_id','id')->where('remarks','Franchise Model');
     } 
 
     public function binary_bonus()
     {
-        return $this->hasMany('App\Models\Income','user_id','id')->where('remarks','Rank Income');
+        return $this->hasMany('App\Models\Income','user_id','id')->where('remarks','Reward Income');
     } 
 
     
     public function sponsor_bonus()
     {
-        return $this->hasMany('App\Models\Income','user_id','id')->where('remarks','Autopool Income');
+        return $this->hasMany('App\Models\Income','user_id','id')->where('remarks','Direct Income');
     } 
         
     public function level_bonus()

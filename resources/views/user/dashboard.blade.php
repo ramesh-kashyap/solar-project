@@ -175,7 +175,7 @@ overflow: hidden;
                                                  <h5>Activation Wallet</h5>
                                                  <h3>
                                                      {{ currency() }}
-                                                     {{ number_format(Auth::user()->fund_balance(), 2) }}
+                                                     {{ number_format(Auth::user()->withdraw(), 2) }}
                                                  </h3>
                                                 
                                              </div>
@@ -206,7 +206,7 @@ overflow: hidden;
                                      <div class="col-lg-4 mt-3 mb-3">
                                          <div class="dark-card-one">
                                              <div class="dc-left">
-                                                 <span>Auto Pool  Income</span>
+                                                 <span>Direct  Income</span>
                                                  <p>{{ currency() }}
                                                      {{ number_format(Auth::user()->sponsor_bonus->sum('comm'), 2) }}
                                                  </p>
@@ -239,7 +239,7 @@ overflow: hidden;
                                      <div class="col-lg-4 mt-3 mb-3">
                                         <div class="dark-card-one">
                                             <div class="dc-left">
-                                                <span>Rank & Reward Income</span>
+                                                <span>Reward Income</span>
                                                 <p>{{ currency() }}
                                                     {{ number_format(Auth::user()->binary_bonus->sum('comm'), 2) }}
                                                 </p>
@@ -250,13 +250,13 @@ overflow: hidden;
                                         </div>
                                     </div>
 
-                                     <!-- <div class="col-lg-4 mt-3 mb-3">
+                                     <div class="col-lg-4 mt-3 mb-3">
                                         <div class="dark-card-one">
                                             <div class="dc-left">
-                                                <span>Weekly Bonus </span>
+                                                <span>Franchise Model </span>
                                                 <p>
                                                 <p>{{ currency() }}
-                                                    {{ number_format(Auth::user()->weekly_bonus->sum('comm'), 2) }}
+                                                    {{ number_format(Auth::user()->franchise_bonus->sum('comm'), 2) }}
                                                 </p>
                                                 </p>
                                             </div>
@@ -267,7 +267,7 @@ overflow: hidden;
 
                                         </div>
 
-                                    </div> -->
+                                    </div>
 
                                     <!-- <div class="col-lg-4 mt-3 mb-3">
                                         <div class="dark-card-one">

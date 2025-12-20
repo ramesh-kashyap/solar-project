@@ -63,7 +63,7 @@ class Profile extends Controller
         try{
             $validation =  Validator::make($request->all(), [
                 'email' => 'required|string',
-                 'usdtBep20' => 'required',
+                //  'usdtBep20' => 'required',
                 'phone' => 'required|numeric',
 
             ]);
@@ -82,7 +82,7 @@ class Profile extends Controller
           $update_data['phone']=$post_array['phone'];
           $update_data['email']=$post_array['email'];
        
-          $update_data['usdtBep20']=$post_array['usdtBep20'];
+        //   $update_data['usdtBep20']=$post_array['usdtBep20'];
           $user =  User::where('id',$id)->update($update_data);
 
 

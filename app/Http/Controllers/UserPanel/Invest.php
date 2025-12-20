@@ -33,133 +33,128 @@ class Invest extends Controller
     }
 
 
-  public function fundActivation(Request $request)
+
+
+
+
+
+
+
+public function confirmDeposit(Request $request)
 {
-    $validation = Validator::make($request->all(), [
-        'amount' => 'required|numeric|min:50',
-        'username' => 'required|exists:users,username',
-        'transaction_password' => 'required',
+    $validator = Validator::make($request->all(), [
+        'amount'      => 'required|numeric',
+        'paymentMode' => 'required',
     ]);
 
-    if ($validation->fails()) {
-        return redirect()->route('user.invest')
-            ->withErrors($validation->getMessageBag()->first())
-            ->withInput();
+    if ($validator->fails()) {
+        return redirect()->back()->withErrors($validator)->withInput();
     }
 
-    $user = Auth::user();
-    $password = $request->transaction_password;
-    $amount = $request->amount;
+    $this->data['amount'] = $request->amount;
+    $this->data['paymentMode'] = $request->paymentMode;
+    $this->data['page'] = 'user.invest.confirmDeposit';
 
-    try {
-        if (!Hash::check($password, $user->tpassword)) {
-            return Redirect::back()->withErrors(['Invalid Transaction Password']);
-        }
-
-        if ($user->fund_balance() < $amount) {
-            return Redirect::back()->withErrors(['Insufficient balance in your account.']);
-        }
-
-        $user_detail = User::where('username', $request->username)->latest()->first();
-        $existingInvestment = Investment::where('user_id', $user_detail->id)
-            ->where('status', '!=', 'Decline')
-            ->latest()->first();
-
-        if ($existingInvestment) {
-            return Redirect::back()->withErrors(['User ID already Active.']);
-        }
-
-        DB::beginTransaction();
-
-        // Record the investment
-        $investmentData = [
-            'transaction_id' => md5(time() . rand()),
-            'user_id' => $user_detail->id,
-            'user_id_fk' => $user_detail->username,
-            'amount' => $amount,
-            'payment_mode' => 'USDT',
-            'status' => 'Active',
-            'sdate' => now()->toDateString(),
-            'active_from' => $user->username,
-            'walletType' => 1,
-        ];
-
-        Investment::create($investmentData);
-        
-        
-           $UpgradeData = [
-            'transaction_id' => md5(time() . rand()),
-            'user_id' => $user_detail->id,
-            'user_id_fk' => $user_detail->username,
-            'amount' => 20,
-            'payment_mode' => 'USDT',
-            'status' => 'Active',
-            'sdate' => now()->toDateString(),
-            'active_from' => $user->username,
-            'walletType' => 1,
-            'round'   =>1,
-        ];
-
-        Upgrade::create($UpgradeData);
-        
-
-        // Update user status and handle placement
-        if ($user_detail->active_status === "Pending") {
-            User::where('id', $user_detail->id)->update([
-                'active_status' => 'Active',
-                'adate' => now(),
-                'package' => $amount,
-                'rank' => 1
-            ]);
-
-            $round = 'round1';
-            $parentUsername = $user_detail->sponsor_detail->username ?? '';
-            // dd($parentUsername);
-            $placement = findAvailablePlacement($round, $parentUsername);
-            // dd($placement);
-            $pos = $placement['position'] ?? 'Left';
-            $sponsor = $placement['placement_id'] ?? 0;
-
-            $sponsorLevel = DB::table($round)->where('user_id_fk', $sponsor)->first();
-            $level = $sponsorLevel ? $sponsorLevel->level + 1 : 0;
-
-            DB::table($round)->updateOrInsert(
-                ['user_id_fk' => $user_detail->username],
-                [
-                    'ParentId' => $sponsor,
-                    'sponsor' => $sponsor,
-                    'level' => $level,
-                    'user_id' => $user_detail->id,
-                    'position' => $pos,
-                    'isFake' => 0,
-                ]
-            );
-
-            autoFillFakeUsers($user_detail->username);
-        } else {
-            $newPackage = $user_detail->package + $amount;
-            User::where('id', $user_detail->id)->update([
-                'active_status' => 'Active',
-                'package' => $newPackage
-            ]);
-        }
-
-        add_level_income($user_detail->id, $amount);
-
-        DB::commit();
-
-        return redirect()->route('user.invest')
-            ->withNotify([['success', 'User activation submitted successfully.']]);
-    } catch (\Exception $e) {
-        DB::rollBack();
-        Log::error('Fund Activation Error: ' . $e->getMessage());
-            print_r($e->getMessage());
-    die("hi");
-        return redirect()->route('user.invest')
-            ->withErrors(['error' => 'An error occurred. Please try again.'])
-            ->withInput();
-    }
+    return $this->dashboard_layout();
 }
+
+
+
+
+
+
+ 
+
+
+
+  public function fundActivation(Request $request)
+  {
+    try {
+      // âœ… Validation
+      $validation = Validator::make($request->all(), [
+        'amount' => 'required|numeric',
+        'paymentMode' => 'required',
+        'utrno' => 'required',
+      ]);
+
+      if ($validation->fails()) {
+        Log::info($validation->getMessageBag()->first());
+        return redirect()
+          ->route('user.invest')
+          ->withErrors($validation->getMessageBag()->first())
+          ->withInput();
+      }
+
+      // âœ… Current logged-in user
+      $user = Auth::user();
+      $user_detail = User::where('username', $user->username)
+        ->orderBy('id', 'desc')
+        ->first();
+
+      // âœ… Latest investment check
+      $invest_check = Investment::where('user_id', $user_detail->id)
+        ->where('status', '!=', 'Decline')
+        ->orderBy('id', 'desc')
+        ->first();
+
+
+
+$pendingRequest = Investment::where('user_id', Auth::id())
+            ->where('status', 'Pending')
+            ->exists();
+
+        if ($pendingRequest) {
+            return redirect()
+                ->route('user.invest')
+                ->withErrors('Your previous deposit request is still pending. Please wait for approval.')
+                ->withInput();
+        }
+
+
+
+
+      $invoice = substr(str_shuffle("0123456789"), 0, 7);
+      $joining_amt = $request->amount;
+      $last_package = $invest_check ? $invest_check->amount : 0;
+
+      // âœ… Handle file upload
+      if ($request->hasFile('account')) {
+        $image = $request->file('account');
+        $imageName = time() . '_' . $image->getClientOriginalName();
+        $image->move(public_path('uploads/'), $imageName);
+      } else {
+        $imageName = null;
+      }
+
+      // âœ… Store in DB
+      $data = [
+        'transaction_id'         => $request->utrno,
+        'user_id'       => $user_detail->id,
+        'user_id_fk'    => $user_detail->username,
+        'amount'        => $request->amount,
+        'status'        => 'Pending',
+        'payment_mode'  => $request->paymentMode, 
+        'slip'          => $imageName,
+        'sdate'         => date("Y-m-d"),
+      ];
+
+      Investment::insert($data);
+
+      // âœ… Success message
+      $notify[] = ['success', 'Your Deposit request has been submitted successfully'];
+      return redirect()->route('user.invest')->withNotify($notify);
+    } catch (\Exception $e) {
+      Log::info('error here');
+      Log::info($e->getMessage());
+      return redirect()
+        ->route('user.invest')
+        ->withErrors($e->getMessage())
+        ->withInput();
+    }
+  }
+
+
+
 
 
   public function ditributor_gap_margin($userid,$gapMarginBonus,$amt,$userPercent,$user_detail,$level=20){

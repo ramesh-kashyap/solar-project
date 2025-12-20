@@ -108,6 +108,7 @@ Route::any('/SubmitBuyFund', [App\Http\Controllers\UserPanel\AddFund::class, 'Su
 
 // invest
 Route::get('/invest', [App\Http\Controllers\UserPanel\Invest::class, 'index'])->name('user.invest');
+Route::any('/confirmDeposit', [App\Http\Controllers\UserPanel\Invest::class, 'confirmDeposit'])->name('user.confirmDeposit');
 Route::post('/fundActivation', [App\Http\Controllers\UserPanel\Invest::class, 'fundActivation'])->name('user.fundActivation');
 Route::get('/DepositHistory', [App\Http\Controllers\UserPanel\Invest::class, 'invest_list'])->name('user.DepositHistory');
 Route::get('/all-packages', [App\Http\Controllers\UserPanel\Invest::class, 'all_packages'])->name('user.all-packages');
@@ -135,9 +136,9 @@ Route::get('/tree-view', [App\Http\Controllers\UserPanel\Team::class, 'genealogy
 //bonus
 Route::get('/level-income', [App\Http\Controllers\UserPanel\Bonus::class, 'index'])->name('user.level-income');
 Route::get('/matching-bonus', [App\Http\Controllers\UserPanel\Bonus::class, 'matchingBonus'])->name('user.matching-bonus');
-Route::get('/rank_income', [App\Http\Controllers\UserPanel\Bonus::class, 'direct_income'])->name('user.rank_income');
+Route::get('/direct_income', [App\Http\Controllers\UserPanel\Bonus::class, 'direct_income'])->name('user.direct_income');
 Route::get('/reward-bonus', [App\Http\Controllers\UserPanel\Bonus::class, 'reward_income'])->name('user.reward-bonus');
-Route::get('/pool_income', [App\Http\Controllers\UserPanel\Bonus::class, 'roi_income'])->name('user.pool_income');
+Route::get('/franchise_model', [App\Http\Controllers\UserPanel\Bonus::class, 'roi_income'])->name('user.roi_income');
 Route::get('/weeklyBonus', [App\Http\Controllers\UserPanel\Bonus::class, 'weeklyBonus'])->name('user.weeklyBonus');
 //end bonus
 

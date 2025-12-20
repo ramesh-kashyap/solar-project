@@ -98,7 +98,7 @@
             <div class="d-flex align-items-center flex-wrap w-full justify-between">
                 <div>
                     <!--begin::Page Title-->
-                    <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">MONTHLY ROYALTY</h5>
+                    <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5"> Reward Income</h5>
                     <!--end::Page Title-->
                 </div>
                 <div>
@@ -140,7 +140,7 @@
              
             
   
-                    <form action="{{ route('user.direct-income') }}" method="GET" style="    width: 100%;">
+                    <form action="{{ route('user.reward-bonus') }}" method="GET" style="    width: 100%;">
                         <div class="row">
                             <div class="col-xl-4">
                                 <div class="form-group mb-3">
@@ -169,7 +169,7 @@
                             </div>
                             <div class="col-3">
                                 <div class="form-group mb-3">
-                                    <a href="{{ route('user.direct-income') }}" style="padding: 0.6rem 2rem;"
+                                    <a href="{{ route('user.reward-bonus') }}" style="padding: 0.6rem 2rem;"
                                         name="reset"
                                         class="btn btn-outline-theme btn-lg d-block w-100 btn-primary"
                                         value="Reset">Reset</a>
@@ -190,7 +190,7 @@
                                   
                                     <th>Amount</th>
                                     <th>Date</th>
-                                    <!--<th>From ID </th>-->
+                                    <th>From ID </th>
                                     <th>Remarks </th>
                                 </tr>
                             </thead>
@@ -205,7 +205,7 @@
                                           
                                             <td>{{currency()}} {{ $value->comm }}</td>
                                             <td>{{ $value->created_at }}</td>
-                                            <!--<td>{{ $value->rname }}</td>-->
+                                            <td>{{ $value->rname }}</td>
 
                                             <td>{{ $value->remarks }}</td>
 

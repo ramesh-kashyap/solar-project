@@ -337,7 +337,7 @@
 
 
 
-                                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"
+                                <!-- <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"
                                 id="funds">
                                 <a href="javascript:;" class="menu-link menu-toggle">
                                     <span class="svg-icon menu-icon sidemenu-icon">
@@ -355,13 +355,13 @@
                                             <a href="{{route('user.AddFundUSDT')}}" class="menu-link">
                                                 <span class="menu-text">Fund Deposit </span>
                                             </a>
-                                        </li>
+                                        </li> -->
                                         
                                        
                                         
                                        
 
-
+<!-- 
                                       <li class="menu-item menu-item-submenu" aria-haspopup="true"
                                             data-menu-toggle="hover">
                                             <a href="{{route('user.fundHistory')}}" class="menu-link">
@@ -372,7 +372,7 @@
 
                                     </ul>
                                 </div>
-                            </li>
+                            </li> -->
 
 
                      <!--<li class="menu-item" aria-haspopup="true">-->
@@ -439,37 +439,7 @@
                             </li>
                         
                     
-                     <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"
-                            id="funds">
-                            <a href="javascript:;" class="menu-link menu-toggle">
-                                <span class="svg-icon menu-icon sidemenu-icon">
-                                        <i class='bx bx-group'></i>
-                                    </span>
-                                <span class="menu-text">Autopool Tree</span>
-                                <i class="fas fa-angle-right" id="arrow-icon"></i>
-                            </a>
-                            <div class="menu-submenu dropdown-menu-wrap">
-                                <i class="menu-arrow"></i>
-                                <ul class="menu-subnav">
-                                    
-                                    <?php 
-                                        $userRounds = \App\Models\Upgrade::where('user_id', Auth::user()->id)->get();
-                                    ?>
-                                       @foreach($userRounds as $round)
-                                        <li class="menu-item menu-item-submenu" aria-haspopup="true"
-                                        data-menu-toggle="hover">
-                                        <a href="{{ route('user.tree', ['round' => $round->round]) }}" class="menu-link">
-                                            <span class="menu-text"> Autopool $<?php echo round($round->amount)?> Tree</span>
-                                        </a>
-                                    </li>  
-                                    @endforeach
-
-
-                               
-
-                                    </ul>
-                                </div>
-                            </li>
+                  
     
 
 
@@ -528,6 +498,13 @@
                                                 <span class="menu-text">Transfer Reports</span>
                                             </a>
                                         </li> --}}
+
+                                          <li class="menu-item menu-item-submenu" aria-haspopup="true"
+                                            data-menu-toggle="hover">
+                                            <a href="{{route('user.direct_income')}}" class="menu-link">
+                                                <span class="menu-text">Direct Income</span>
+                                            </a>
+                                        </li>
                                         
                                            <li class="menu-item menu-item-submenu" aria-haspopup="true"
                                         data-menu-toggle="hover">
@@ -537,23 +514,18 @@
                                         </li>
                                        <li class="menu-item menu-item-submenu" aria-haspopup="true"
                                             data-menu-toggle="hover">
-                                            <a href="{{route('user.pool_income')}}" class="menu-link">
-                                                <span class="menu-text">Auto Pool Income</span>
+                                            <a href="{{route('user.roi_income')}}" class="menu-link">
+                                                <span class="menu-text">Franchise Model</span>
                                             </a>
                                         </li>  
                                            <li class="menu-item menu-item-submenu" aria-haspopup="true"
                                             data-menu-toggle="hover">
-                                            <a href="{{route('user.rank_income')}}" class="menu-link">
-                                                <span class="menu-text">Rank & Reward</span>
+                                            <a href="{{route('user.reward-bonus')}}" class="menu-link">
+                                                <span class="menu-text"> Reward Income</span>
                                             </a>
                                         </li>
                                        
-                                        <!-- <li class="menu-item menu-item-submenu" aria-haspopup="true"
-                                            data-menu-toggle="hover">
-                                            <a href="{{route('user.matching-bonus')}}" class="menu-link">
-                                                <span class="menu-text">Matching Income</span>
-                                            </a>
-                                        </li> -->
+                                      
 
                                      <!-- <li class="menu-item menu-item-submenu" aria-haspopup="true"
                                         data-menu-toggle="hover">
