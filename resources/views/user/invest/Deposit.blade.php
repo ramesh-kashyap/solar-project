@@ -66,8 +66,8 @@
         <!--begin::Container-->
         <div class="container-fluid">
             <!--begin::Dashboard-->
-            <form onsubmit="return amtValue();" class="form mt-0" name="frmmain" id="kt_form" method="POST"
-                action="{{ route('user.fundActivation') }}">
+            <form  class="form mt-0" name="frmmain"  method="POST"
+                action="{{ route('user.confirmDeposit') }}">
                 {{ csrf_field() }}
 
                 <div class="col-12">
@@ -86,19 +86,7 @@
                                 <!-- ==================================== -->
 
 
-                               <div class="col-lg-12">
-                                    <div class="form-group mt-2 mb-3 text-left">
-                                        <label for="investfromwallet"> Wallet</label>
-                                        <select class="form-control" id="investfromwallet" required name="walletType">
-           
-                                            <option value="1">ACTIVATION WALLET (Balance : {{ currency() }}
-                                                {{ number_format(Auth::user()->fund_balance(), 2) }})</option> 
-                                            <!--<option value="2">INCOME WALLET (Balance : {{ currency() }}-->
-                                            <!--    {{ number_format(Auth::user()->available_balance(), 2) }})</option> -->
-
-                                        </select>
-                                                                </div>
-                                </div>
+             
 
 
                                 <div class="col-lg-12">
@@ -108,29 +96,24 @@
                                       
 
                                             <select name="amount" id="" class="form-control" required> 
-                                                <option value="50">50 USDT</option>
+                                                <option value="10000">{{currency()}}10000 (Starter)</option>
+                                                 <option value="25000"> {{currency()}}25000 (Growth)</option>
+                                                  <option value="50000"> {{currency()}}50000 (Advanced )</option>
+                                                   <option value="100000">{{currency()}} 100000 (Elite )</option>
                                             </select>
                                     </div>
 
                                 </div>
 
 
-                                <div class="col-lg-12">
-                                    <div class="form-group mt-2 mb-3 text-left">
-                                        <label for="investfromwallet">Member ID</label>
-                                        <input type="text" name="username" class="form-control check_sponsor_exist"
-                                            autocomplete="off" placeholder="Member ID" data-response="sponsor_res"
-                                            required value="">
-                                        <span id="sponsor_res"></span>
-                                    </div>
-                                </div>
+                         
 
                                 <div class="col-lg-12">
                                     <div class="form-group mt-2 mb-3 text-left">
-                                        <label for="investfromwallet">Transaction Password</label>
-                                        <input type="password" name="transaction_password" class="form-control"
-                                            autocomplete="off" placeholder="Transaction Password" required
-                                            value="">
+                                        <label for="investfromwallet">Payment Mode</label>
+                                        <input type="text" name="paymentMode" class="form-control"
+                                            autocomplete="off" placeholder="paymentMode"
+                                            value="INR">
                                     </div>
                                 </div>
 
@@ -140,7 +123,7 @@
 
 
                             <div class="al-center">
-                                <button type="submit" class="btn btn-primary report-btn submit-btn">Make Investment
+                                <button type="submit" class="btn btn-primary report-btn submit-btn">Submit
                                    <span
                                                                                     class="thin-arrow">&rarr;</span></button>
 
