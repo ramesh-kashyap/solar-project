@@ -735,7 +735,7 @@
 
                 <div class="ss-contact-form">
                     <div class="ss-logo text-center">
-                        <a href="{{route('Index')}}"><img src="{{asset('')}}assets/images/Logo.png"style="width: 160px;"></a>
+                        <a href="{{route('Index')}}"><img src="{{asset('')}}assets/images/Logo.png"style="width: 300px;"></a>
                     </div>
                     <h3 class="ss-title text-center" style="margin: 30px 0;">Register</h3>
 

@@ -720,27 +720,29 @@
         </div>
     </div>
 
+    <div class="page-wrapper" id="main-scrollbar" data-scrollbar>
+
+                <section class="login-section bg_img" style="background-image: url( ../assets/images/frontend/login/6305e36cea4e31661330284.jpg );">
+        <div class="login-area">
+            <div class="login-area-inner">
+                <div class="text-center">
+                    <a class="site-logo mb-4" href="{{route('Index')}}">
+                        <img src="{{asset('')}}assets/images/logoIcon/LOGO1-min.png" alt="site-logo">
+                    </a>
+                    <h6 class="title mb-2"></h6>
+                </div>
+                <form  method="POST" action="{{route('forgot_submit')}}">
+                    {{ csrf_field() }}
 
 
-    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-
-
-            <form action="{{ route('forgot_submit') }}" method="POST" class="mx-auto" style="max-width: 500px;">
-
-                {{ csrf_field() }}
-
-                <!-- SweetAlert2 CDN -->
-
-                <div class="ss-contact-form">
-                    <div class="ss-logo text-center">
-                        <a href="{{route('Index')}}"><img src="{{asset('')}}assets/images/Logo.png" style="width: 160px;"></a>
-                    </div>
-                    <h3 class="ss-title text-center" style="margin: 30px 0;">Forgot Password</h3>
-
-                    <div class="ss-form-input">
-                        <input type="text" name="username" class="form-control" placeholder="Enter Your Username">
+                    
+                                        <div class="form-group">
+                        <label>Enter Username </label>
+                        <div class="input-group">
+                            <div class="input-group-text"><i class="las la-user"></i></div>
+                            <input type="text" class="form-control" value="" name="username" required placeholder="username">
+                        </div>
                     </div>
 
                   

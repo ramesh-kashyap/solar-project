@@ -735,7 +735,7 @@
 
                 <div class="ss-contact-form">
                     <div class="ss-logo text-center">
-                        <a href="{{route('Index')}}"><img src="{{asset('')}}assets/images/Logo.png" style="width: 160px;"></a>
+                        <a href="{{route('Index')}}"><img src="{{asset('')}}assets/images/Logo.png" style="width: 300px;"></a>
                     </div>
                     <h3 class="ss-title text-center" style="margin: 30px 0;">Log In</h3>
 
@@ -748,6 +748,7 @@
                     </div>
 
                     <p style="margin-top: -10px; margin-bottom: 10px; text-align: right;">
+                        <a href="{{ route('forgot-password') }}" style="color: green;">Forgot Password?</a>
                         <a href="{{ route('forgot-password') }}" style="color: green;">Forgot Password?</a>
                     <div class="text-center mt-3">
                         <button type="submit" class="ss-btn ss-con-btn">Login</button>
