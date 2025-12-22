@@ -183,15 +183,21 @@
 									</div>
 								</div>
 							</div>
-
-							
-
-
-
-						
-
-
-
+  <div class="col-xl-4 col-sm-4">
+								<div class="card">
+									<div class="card-body d-flex align-items-center justify-content-between">
+										<div class="menu">
+											<span class="font-w500 fs-16 d-block mb-2"> Franchise Model</span>
+											<h2>{{currency()}}{{  number_format((\App\Models\Income::where('remarks','Franchise Model')->sum('comm')),2)   }}</h2>
+										</div>	
+										<div class="d-inline-block position-relative donut-chart-sale">
+											
+                                                <img src="{{asset('admin/images/investment.png')}}" style="width: 80px;" alt="">
+											
+										</div>
+									</div>
+								</div>
+							</div>
                             <div class="col-xl-4 col-sm-4">
 								<div class="card">
 									<div class="card-body d-flex align-items-center justify-content-between">
