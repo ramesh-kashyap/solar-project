@@ -67,6 +67,8 @@ Route::get('/shop', [App\Http\Controllers\FrontController::class, 'shop'])->name
 
 Route::get('/home', [App\Http\Controllers\UserPanel\Dashboard::class, 'index'])->name('home');
 
+
+
 Route::prefix('user')->group(function ()
 {
 Route::middleware('auth')->group(function ()
@@ -247,6 +249,8 @@ Route::get('get_support_msg', [App\Http\Controllers\Admin\SupportController::cla
 Route::get('close_ticket_', [App\Http\Controllers\Admin\SupportController::class, 'close_ticket_'])->name('admin.close_ticket_');
 Route::get('reply_support_msg', [App\Http\Controllers\Admin\SupportController::class, 'reply_support_msg'])->name('admin.reply_support_msg');
 Route::post('admin_ticket_submit', [App\Http\Controllers\Admin\SupportController::class, 'admin_ticket_submit'])->name('admin.admin_ticket_submit');
+Route::post('/admin/user/{user}/toggle-franchise', [App\Http\Controllers\Admin\UserController::class, 'toggleFranchise'])
+    ->name('admin.toggleFranchise');
 
 });
 
