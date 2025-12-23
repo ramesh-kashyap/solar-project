@@ -352,52 +352,38 @@
                                      
                                     
 
+   <div class="col-lg-4 mt-3 mb-3">
+                                         <div class="" style="    border: 1px solid #3e3e3e;
+                                                                border-radius: 7px;
+                                                                padding-top: 15px;
+                                                                padding-bottom: 65px;
+                                                                background: #0f0f0f;
+                                                              
+                                                                height: 100px;">
+                                             <div class="">
+                                                 <!-- <span>Referral Link</span> -->
+                                                 <p>
+                                                 <div class="input-group" style="padding: 12px;">
+
+                                                     <input class="form-control ref-bg" type="text" style=" font-size: 11px;
+                                                                                        "
+                                                         name=" link" readonly="" id="clipboardleft"
+                                                         value="{{ asset('') }}register?ref={{ Auth::user()->username }}">
+                                                     <span class="input-group-addon p-0"><button
+                                                             class="btn-copy copyclipbtn"
+                                                             onclick="copyclipboardleft('clipboardleft')"
+                                                             style="border-radius: 0;"><i
+                                                                 class="fas fa-copy"></i></button></span>
+                                                 </div>
+
+                                                 </p>
+                                             </div>
 
 
+                                         </div>
 
-   <div class="rounded-box-wrap mt-5 mb-5">
-                                        <div class="dark-block">
-                                         
-                                            <div class="row">
-                                               
-                                                <div class="col-lg-">
-                                                   
-                                                    
-                                                    <div class="row d-flex clearfix">
-                                                        <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
-                                                            <div class="afl-link" style="
-    width: 320px;
-    height: 172px;
-">
-                                                                <label class="control-label mt-0">Referral Link</label>
-                                                                <div class="input-group">
-                                                                    
-                                                                    <input class="form-control ref-bg" type="text" style=" font-size: 11px;
-"
-                                                                        name="link" readonly="" id="clipboardleft"
-                                                                        value="{{ asset('') }}register?ref={{ Auth::user()->username }}">
-                                                                    <span class="input-group-addon p-0"><button
-                                                                            class="btn-copy copyclipbtn"
-                                                                            onclick="copyclipboardleft('clipboardleft')"
-                                                                            style="border-radius: 0;"><i
-                                                                                class="fas fa-copy"></i></button></span>
-                                                                </div>
-                                                               
-                                                            </div>
-                                                        </div>
-                                                        
+                                     </div>
 
-                                                        
-                                                    </div>
-
-
-
-
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
 
                                  </div>
 
