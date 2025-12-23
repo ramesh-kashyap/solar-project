@@ -459,6 +459,26 @@ class UserController extends Controller
         return redirect()->back()->withNotify($notify);
       }
 
+public function toggleFranchise(Request $request, User $user)
+{
+    // debug
+    \Log::info('Toggling Franchise flag for user ' . $user->id);
+
+    // flip
+    $user->is_franchise_enabled = $user->is_franchise_enabled ? 0 : 1;
+
+    // ensure it's dirty
+    if ($user->isDirty('is_franchise_enabled')) {
+        $user->save();
+        \Log::info('Toggle saved', ['new' => $user->is_franchise_enabled]);
+    } else {
+        \Log::warning('No change detected, not saved');
+    }
+
+    return redirect()->back()->with('success', 'Status updated successfully');
+}
+
+
 
 
 

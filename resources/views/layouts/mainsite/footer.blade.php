@@ -5,7 +5,7 @@
             <div class="ss-footer-logosec">
                 <div class="ss-footer-logo">
                     <a href="{{route('Index')}}">
-                        <img src="{{asset('')}}assets/images/Logo.png" style="width: 160px;margin-top: 58px;" alt="logo" />
+                        <img src="{{asset('')}}assets/images/Logo.png" style="width: 95px;margin-top: 58px;" alt="logo" />
                     </a>
                 </div>
                 <p>Powering a sustainable future with clean and renewable solar energy.

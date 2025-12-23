@@ -125,7 +125,7 @@
     <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
         <!--begin::Logo-->
         <a href="/">
-            <img alt="Logo" src="{{asset('')}}assets/images/Logo.png"  style="width: 173px;">
+            <img alt="Logo" src="{{asset('')}}assets/images/Logo.png"  style="width: 100px;">
         </a>
         <!--end::Logo-->
         <!--begin::Toolbar-->
@@ -177,6 +177,7 @@
                                                 </div>
                                             </div>
                                         </a>
+                                        
 
                                         <a href="{{route('user.ChangePass')}}" class="iq-sub-card iq-bg-primary-hover">
                                             <div class="media align-items-center">
@@ -282,7 +283,8 @@
                                     <span class="menu-text">Dashboard</span>
                                 </a>
                             </li>
-
+                          @auth
+                          @if(auth()->user()->is_franchise_enabled)
                             <li class="menu-item" aria-haspopup="true">
                                 <a href="{{route('user.profile')}}" class="menu-link">
                                     <span class="svg-icon menu-icon sidemenu-icon">
@@ -291,7 +293,9 @@
                                     <span class="menu-text">My Profile</span>
                                 </a>
                             </li>
-
+                            @endif
+                            @endauth
+                            
 
 
 
