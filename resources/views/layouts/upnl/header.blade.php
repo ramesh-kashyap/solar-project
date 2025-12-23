@@ -583,12 +583,12 @@
                                                 <span class="menu-text">Password Setting</span>
                                             </a>
                                         </li>
-                                        <li class="menu-item menu-item-submenu" aria-haspopup="true"
+                                        <!-- <li class="menu-item menu-item-submenu" aria-haspopup="true"
                                             data-menu-toggle="hover">
                                             <a href="{{route('user.trx-password')}}" class="menu-link">
                                                 <span class="menu-text">Change Transaction Password</span>
                                             </a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
 

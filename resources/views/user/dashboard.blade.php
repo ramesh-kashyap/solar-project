@@ -351,6 +351,9 @@ overflow: hidden;
                                      
                                     
 
+
+
+
    <div class="rounded-box-wrap mt-5 mb-5">
                                         <div class="dark-block">
                                          
@@ -369,7 +372,7 @@ overflow: hidden;
                                                                 <div class="input-group">
                                                                     
                                                                     <input class="form-control ref-bg" type="text" style=" font-size: 11px;
-""
+"
                                                                         name="link" readonly="" id="clipboardleft"
                                                                         value="{{ asset('') }}register?ref={{ Auth::user()->username }}">
                                                                     <span class="input-group-addon p-0"><button
@@ -385,6 +388,11 @@ overflow: hidden;
 
                                                         
                                                     </div>
+
+
+
+
+                                                    
                                                 </div>
                                             </div>
                                         </div>

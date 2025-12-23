@@ -537,24 +537,27 @@ function verificationCode($length)
                      
                       $pp=0;
                        if($sp_status=="Active")
-                       {  
-                        if($cnt==1)
-                        {
-                          $pp = 7;
-                        }
-                        if($cnt==2)
-                        {
-                          $pp = 3;
-  
-                        }
-                        if($cnt==3)
-                        {
-                          $pp = 2;
-  
-                        }
-                       
-                       
+                       { 
                         
+                        
+                        if ($cnt == 1) {
+                            $pp = 5;
+                       } elseif ($cnt == 2) {
+                         $pp = 4;
+                       } elseif ($cnt == 3) {
+                         $pp = 3;
+                      } elseif ($cnt == 4) {
+                          $pp = 2;
+                      } elseif ($cnt == 5) {
+                      $pp = 1;
+                     } elseif ($cnt >= 6 && $cnt <= 10) {
+                      $pp = 0.75;
+                      } elseif ($cnt >= 11 && $cnt <= 20) {
+                      $pp = 0.50;
+                      } elseif ($cnt >= 21 && $cnt <= 30) {
+                       $pp = 0.25;   
+                        } 
+
 
                         }
                         
@@ -605,101 +608,111 @@ function verificationCode($length)
 
 
 
-function add_direct_income($id,$amt)
-{
+  function add_direct_income($id,$amt)
+  {
 
-  //$user_id =$this->session->userdata('user_id_session')
+    //$user_id =$this->session->userdata('user_id_session')
 $data = User::where('id',$id)->orderBy('id','desc')->first();
 
-$user_id = $data->username;
-$fullname=$data->name;
+  $user_id = $data->username;
+  $fullname=$data->name;
+ 
+  $rname = $data->username;
+  $user_mid = $data->id;
+    
 
-$rname = $data->username;
-$user_mid = $data->id;
-  
-
-      $cnt = 1;
+        $cnt = 1;
 
         $amount = $amt/100;
-
-              $Sposnor_id = User::where('id',$user_mid)->orderBy('id','desc')->first();
-              $sponsor=$Sposnor_id->sponsor;
-              if (!empty($sponsor))
-               {
-                $Sposnor_status = User::where('id',$sponsor)->orderBy('id','desc')->first();
+          
+  
+          while ($user_mid!="" && $user_mid!="1"){
+                $Sposnor_id = User::where('id',$user_mid)->orderBy('id','desc')->first();
+                $sponsor=$Sposnor_id->ParentId;
+                if (!empty($sponsor))
+                 {
+                  $Sposnor_status = User::where('id',$sponsor)->orderBy('id','desc')->first();
+                  $Sposnor_cnt = User::where('ParentId',$sponsor)->where('active_status','Active')->count("id");
                 $sp_status=$Sposnor_status->active_status;
-              $Sposnor_cnt = User::where('sponsor',$sponsor)->where('active_status','Active')->count("id");
-               $joining_amt=Investment::where('user_id',$Sposnor_status->id)->where('status','Active')->sum("amount");
-               $total_get = $joining_amt*3;
-               $total_profit= Income::where('user_id',$Sposnor_status->id)->sum("comm");
-              }
-              else
-              {
-                $Sposnor_status =array();
-                $sp_status="Pending";
-                $Sposnor_cnt =0;
-                $total_get =0;
-                $total_profit= 0;
-              }
-             $percent = 10;
-           
-             if($sp_status=="Active")
-               {  
-            
-                $pp = $amount*$percent;
-              
-              
-              }else
-              {
+                }
+                else
+                {
+                  $Sposnor_status =array();
+                  $sp_status="Pending";
+                  $Sposnor_cnt=0;
+                }
+               
                 $pp=0;
-              }               
-             
-              
-              $user_mid = $Sposnor_status?$Sposnor_status->id:0;
-              //echo $user_id;
-             //die;
-              $idate = date("Y-m-d");
-        
-             
-              $spid = $Sposnor_status?$Sposnor_status->id:0;
-           
-             
-              $user_id_fk=$sponsor;
-              //print_r($user_id_fk);die;
-             // echo $cnt." ".$spid." ".$pp."<br>";
+                 if($sp_status=="Active")
+                 {  
+                      if ($cnt == 1) 
+                        
+                        {
+                     $pp = $amount * 3;         
+                    }
 
-             $max_income=$total_get;
-             $n_m_t = $max_income - $total_profit;
-             // dd($total_received);
-               if($pp >= $n_m_t)
-               {
-                   $pp = $n_m_t;
-                   
-                  User::where('id',$Sposnor_status?$Sposnor_status->id:0)->update(['active_status' => "Inactive"]);      
-                  Investment::where('user_id',$Sposnor_status?$Sposnor_status->id:0)->update(['roiCandition' => 1]);  
-              
-               }  
+                  elseif 
+                  ($cnt==2)
+                   {
+                   $pp = $amount * 2;        
+              } 
+             elseif
+
+                 ($cnt==3) {
+             $pp = $amount * 1;       
+                 }
+
+else {
+    $pp = 0;
+}
 
 
-              if($spid>0 && $pp>0){               
-                 $data = [
-                'user_id' => $user_mid,
-                'user_id_fk' =>$Sposnor_status->username,
-                'amt' => $amt,
-                'comm' => $pp,
-                'remarks' => 'Referral Income',
-                'level' => $cnt,
-                'rname' => $rname,
-                'fullname' => $fullname,
-                'ttime' => Date("Y-m-d"),
+                 
+                  }
+                  
+                    
+               
                 
-            ];
-            $user_data =  Income::Create($data);
+                $user_mid = @$Sposnor_status->id;
 
-            add__super_direct_income($user_mid,$pp);
-           
-       }
+                $spid = @$Sposnor_status->id;
 
+              //   echo $user_mid."<br>";
+              //   echo $spid."<br>";
+              //   echo $cnt."<br>";
+              //   echo $pp."<br>";
+              //   echo $sp_status."<br>";
+              //  die;
+                $idate = date("Y-m-d");
+          
+               
+              
+             
+               
+                $user_id_fk=$sponsor;
+                if($spid>0 && $cnt<=50){
+                  if($pp>0){
+                   
+                   $data = [
+                  'user_id' => $user_mid,
+                  'user_id_fk' =>$Sposnor_status->username,
+                  'amt' => $amt,
+                  'comm' => $pp,
+                  'remarks' =>'Direct Bonus',
+                  'level' => $cnt,
+                  'rname' => $rname,
+                  'fullname' => $fullname,
+                  'ttime' => Date("Y-m-d"),
+                  
+              ];
+               $user_data =  Income::create($data);
+             
+              
+          }
+         }
+         
+          $cnt++;
+}
 
 return true;
 }
