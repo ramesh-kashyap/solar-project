@@ -53,7 +53,7 @@ class WithdrawRequest extends Controller
         $validation = Validator::make($request->all(), [
             'amount' => 'required|numeric|min:10', // You had 'min:' with no value — corrected to min:1
             'transaction_password' => 'required',
-              'usdtBep20' => 'required',
+            //   'usdtBep20' => 'required',
             
             // 'paymentMode' => 'required', // Uncomment if needed
         ]);
@@ -76,7 +76,15 @@ class WithdrawRequest extends Controller
             ->where('wdate', date('Y-m-d'))
             ->first();
 
-        // Check if a pending withdraw already exists
+
+   $account = Bank::where('user_id', $user->id)->value('account_no');
+
+if (empty($account)) {
+    return redirect()->back()
+        ->withErrors(['Update your bank KYC']);
+}
+
+
         $pendingWithdraw = Withdraw::where('user_id', $user->id)
             ->where('status', 'Pending')
             ->first();
@@ -96,7 +104,7 @@ class WithdrawRequest extends Controller
             'user_id' => $user->id,
             'user_id_fk' => $user->username,
             'amount' => $request->amount,
-            'account' => $request->usdtBep20, // Fix: was undefined
+            'account' => $account, // Fix: was undefined
             'payment_mode' => 'USDT', // Optional if required
             'status' => 'Pending',
             'wdate' => now()->format('Y-m-d'),

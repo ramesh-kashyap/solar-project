@@ -52,7 +52,7 @@
      
                                         
                                              <th>Transaction Date.</th>
-                                             <th>Wallet Address</th>
+                                             <th>Account No</th>
                                             
                                              <!--<th>Payment Mode</th>-->
                                              <th>Action</th>

@@ -129,8 +129,8 @@
 
         
         <div class="col-12 form-group">
-            <label>UTR Number</label>
-            <input type="text" class="form-control" name="utrno" placeholder="Enter UTR Number" required="">
+            <label>Transaction Password</label>
+            <input type="text" class="form-control" name="utrno" placeholder="Enter Transaction Password" required="">
         </div>
 
         
