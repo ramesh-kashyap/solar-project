@@ -164,7 +164,7 @@
         <style>
             .brand-logo img {
 
-                width: 166px;
+                width: 100px;
             }
 
 
@@ -184,24 +184,6 @@
      
 
         <div class="nav-header">
-            <a href="{{ asset('') }}" class="brand-logo logo-main">
-                <img src="{{ asset('') }}assets/images/Logo.png" alt="logo" />
-            </a>
-
-            <a href="{{ asset('') }}" class="brand-logo logo-favicon" style="display: none;">
-                <img src="{{ asset('') }}assets/images/favicon.png" style="width: 85px;height: 110px;" alt="favicon" />
-            </a>
-
-            <div class="nav-control">
-                <div class="hamburger" onclick="toggleLogo()">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </div>
-            </div>
-        </div>
-
-        <!-- <div class="nav-header">
             <a href="{{asset('')}}" class="brand-logo">
                 <img src="{{asset('')}}assets/images/Logo.png" style="" alt="logo"/>
                 <img src="{{asset('')}}assets/images/Logo.png" style="" alt="logo"/>
@@ -212,8 +194,8 @@
                     <span class="line"></span><span class="line"></span><span class="line"></span>
                 </div>
             </div>
-        </div> -->
-        <script>
+        </div>
+        <!-- <script>
             function toggleLogo() {
                 const logo = document.querySelector(".logo-main");
                 const favicon = document.querySelector(".logo-favicon");
@@ -226,7 +208,7 @@
                     favicon.style.display = "block";
                 }
             }
-        </script>
+        </script> -->
 
         <!--**********************************
             Nav header end
