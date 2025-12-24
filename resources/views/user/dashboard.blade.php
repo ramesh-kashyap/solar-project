@@ -349,42 +349,40 @@
                                          </div>
 
                                      </div>
-
-                                     <div class="col-lg-4 mt-3 mb-3">
-                                         <div class="" style="    border: 1px solid #3e3e3e;
-                                                                border-radius: 7px;
-                                                                padding-top: 15px;
-                                                                padding-bottom: 65px;
-                                                                background: #0f0f0f;
-                                                              
-                                                                height: 100px;">
-                                             <div class="">
-                                                 <!-- <span>Referral Link</span> -->
-                                                 <p>
-                                                 <div class="input-group" style="padding: 12px;">
-
-                                                     <input class="form-control ref-bg" type="text" style=" font-size: 11px;
-                                                                                        "
-                                                         name=" link" readonly="" id="clipboardleft"
-                                                         value="{{ asset('') }}register?ref={{ Auth::user()->username }}">
-                                                     <span class="input-group-addon p-0"><button
-                                                             class="btn-copy copyclipbtn"
-                                                             onclick="copyclipboardleft('clipboardleft')"
-                                                             style="border-radius: 0;"><i
-                                                                 class="fas fa-copy"></i></button></span>
-                                                 </div>
-
-                                                 </p>
-                                             </div>
-
-
-                                         </div>
-
-                                     </div>
+                                     
 
 
 
                                  </div>
+                                 <div class="col-lg-6 mt-3 mb-3">
+            <div class="" style="    border: 1px solid #3e3e3e;
+               border-radius: 7px;
+               padding-top: 15px;
+               padding-bottom: 65px;
+               background: #0f0f0f;
+               height: 150px;
+               margin-left: -13px;
+               "
+               
+               >
+               <div class="">
+                  <span class="ml-4 text-white">Referral Link</span>
+                  <p>
+                  <div class="input-group" style="padding: 12px;">
+                     <input class="form-control ref-bg" type="text" style=" font-size: 11px;
+                        "
+                        name=" link" readonly="" id="clipboardleft"
+                        value="{{ asset('') }}register?ref={{ Auth::user()->username }}">
+                     <span class="input-group-addon p-0"><button
+                        class="btn-copy copyclipbtn"
+                        onclick="copyclipboardleft('clipboardleft')"
+                        style="border-radius: 0;"><i
+                        class="fas fa-copy"></i></button></span>
+                  </div>
+                  </p>
+               </div>
+            </div>
+         </div>
 
                              </div>
                          </div>

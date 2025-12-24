@@ -726,8 +726,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-3 col-md-4 col-sm-5 col-12">
                     <div class="ss-menu-logo">
-                        <a href="{{route('Index')}}"><img src="{{asset('')}}assets/images/Logo.png"></a>
-                    </div>
+<a href="{{route('Index')}}"><img style="width: 95px;" src="{{asset('')}}assets/images/Logo.png"></a>                    </div>
                 </div>
                 <div class="col-lg-9 col-md-8 col-sm-7 col-12">
                     <div class="ss-navmenu-wrapper">

@@ -749,7 +749,6 @@
 
                     <p style="margin-top: -10px; margin-bottom: 10px; text-align: right;">
                         <a href="{{ route('forgot-password') }}" style="color: green;">Forgot Password?</a>
-                        <a href="{{ route('forgot-password') }}" style="color: green;">Forgot Password?</a>
                     <div class="text-center mt-3">
                         <button type="submit" class="ss-btn ss-con-btn">Login</button>
                     </div>
