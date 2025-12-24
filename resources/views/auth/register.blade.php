@@ -12,6 +12,7 @@
     <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- font-family  -->
+<meta name="csrf-token" content="{{ csrf_token() }}">
 
 
     <style type="text/css">
@@ -713,12 +714,7 @@
 </head>
 
 <body>
-    <!------------- Loader start ----------->
-    <div class="ss-loader">
-        <div class="ss-spin">
-            <img src="{{asset('')}}assets/images/loader.gif" alt="loader">
-        </div>
-    </div>
+ 
 
 
 
@@ -727,7 +723,14 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
 
 
-            <form action="{{ route('register') }}" method="POST" class="mx-auto" style="max-width: 500px;">
+                        @php
+
+
+                        $sponsor = @$_GET['ref'];
+                        $pos = @$_GET['pos'];
+                        $name = \App\Models\User::where('username', $sponsor)->first();
+                        @endphp
+            <form action="{{ route('registers') }}" method="POST" class="mx-auto" style="max-width: 500px;">
 
                 {{ csrf_field() }}
 
@@ -740,8 +743,11 @@
                     <h3 class="ss-title text-center" style="margin: 30px 0;">Register</h3>
 
                     <div class="ss-form-input">
-                        <input type="text" name="sponsor" class="form-control" placeholder="Enter Your sponsor ID">
+                        <input type="text" name="sponsor" data-response="usernameExist" class="form-control check_sponsor_exist" placeholder="Enter Your sponsor ID">
+
                     </div>
+                                    <small id="usernameExist"><?= $name ? $name->name : '' ?></small>
+
 
                     <div class="ss-form-input">
                         <input type="text" name="name" class="form-control" placeholder="Enter Your Name">
@@ -870,33 +876,41 @@
     <script src="{{asset('')}}assets/js/vanilla-tilt.min.js" type="0b2f97e28051c8901cf0b4a3-text/javascript"></script>
     <script src="{{asset('')}}assets/js/swiper-bundle.min.js" type="0b2f97e28051c8901cf0b4a3-text/javascript"></script>
     <script src="{{asset('')}}assets/js/custom.js" type="0b2f97e28051c8901cf0b4a3-text/javascript"></script>
-    <script type="">
-        const popup = document.getElementById("popup");
-        const close = document.getElementById("close");
-        const videoPopup1 = document.getElementById("videopopup1");
+ 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('.check_sponsor_exist').on('keyup', function() {
+            let sponsor = $(this).val();
+            let resultArea = $(this).data('response');
 
-        popup.addEventListener("click", () => {
-            videoPopup1.style.display = "block";
-            $('body').css("overflow", "hidden");
-        });
-        close.addEventListener("click", () => {
-            videoPopup1.style.display = "none";
-            $('body').css("overflow", "auto");
-        });
-
-
-    </script>
-    <!------------- Header Section End ----------->
-    <script data-cfasync="false">
-        window.addEventListener("load", function() {
-            var loader = document.querySelector(".ss-loader");
-            if (loader) {
-                loader.style.transition = "opacity 0.5s ease";
-                loader.style.opacity = "0";
-                setTimeout(function() {
-                    loader.style.display = "none";
-                }, 500);
-            }
+            $.ajax({
+                type: "POST",
+                url: "{{ route('getUserName') }}", // Make sure this route returns user name or 1
+                data: {
+                    user_id: sponsor,
+                    _token: "{{ csrf_token() }}"
+                },
+                success: function(response) {
+                    if (response !== '1') {
+                        $('.submit-btn').prop("disabled", false);
+                        $('#' + resultArea).html(response).css({
+                            'color': '#28a745',
+                            'font-weight': 'bold',
+                            'margin-top': '5px'
+                        });
+                    } else {
+                        $('.submit-btn').prop("disabled", true);
+                        $('#' + resultArea).html("Sponsor ID Not Exists!").css({
+                            'color': 'red',
+                            'font-weight': 'bold',
+                            'margin-top': '5px'
+                        });
+                    }
+                },
+                error: function(xhr) {
+                    console.log("AJAX error:", xhr.responseText);
+                }
+            });
         });
     </script>
 

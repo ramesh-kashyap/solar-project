@@ -29,30 +29,16 @@
                     <li><a href="{{route('about-us')}}">About </a></li>
                     <li><a href="{{route('contact-us')}}">Get In Touch</a></li>
                     <li><a href="{{route('services')}}">Services</a></li>
-                    <!-- <li><a href="blog.html">Latest blog</a></li>
-                        <li><a href="javascript:void(0)">More Search</a></li> -->
+                  
                 </ul>
             </div>
-            <!-- <div class="ss-footer-box">
-                    <div class="ss-footer-head">
-                        <h4>Account</h4>
-                        <div class="bottom-line"></div>
-                    </div>
-                    <ul class="ss-links">
-                        <li><a href="cart.html">My Cart</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
-                        <li><a href="shop.html">Shopping details</a></li>
-                        <li><a href="javascript:void(0)">Order</a></li>
-                        <li><a href="javascript:void(0)">Help center</a></li>
-                    </ul>
-                </div> -->
+         
             <div class="ss-footer-box">
                 <div class="ss-footer-head">
                     <h4>Helpful Links</h4>
                     <div class="bottom-line"></div>
                 </div>
                 <ul class="ss-links">
-                    <!-- <li><a href="javascript:void(0);">Supports</a></li> -->
                     <li><a href="{{route('contact-us')}}">Contact Us</a></li>
                     <li><a href="{{route('login')}}">Sign In</a></li>
                     <li><a href="{{route('register')}}">Sign Up</a></li>
@@ -96,32 +82,7 @@
                                 Youtube
                             </span>
                         </a></li>
-                    <!-- <li><a href="javascript:void(0)">
-                                <span>
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M18 18V11.4075C18 8.1675 17.3025 5.6925 13.5225 5.6925C11.7 5.6925 10.485 6.6825 9.99 7.6275H9.945V5.985H6.3675V18H10.1025V12.0375C10.1025 10.4625 10.395 8.955 12.33 8.955C14.2425 8.955 14.265 10.7325 14.265 12.1275V17.9775H18V18ZM0.2925 5.985H4.0275V18H0.2925V5.985ZM2.16 0C0.9675 0 0 0.9675 0 2.16C0 3.3525 0.9675 4.3425 2.16 4.3425C3.3525 4.3425 4.32 3.3525 4.32 2.16C4.32 0.9675 3.3525 0 2.16 0Z"
-                                            fill="#8F8F8F" />
-                                    </svg>
-                                    Linkedin
-                                </span>
-                            </a></li>
-                        <li><a href="javascript:void(0)">
-                                <span>
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M8.99981 5.69922C7.17821 5.69922 5.69861 7.17882 5.69861 9.00042C5.69861 10.822 7.17821 12.3052 8.99981 12.3052C10.8214 12.3052 12.3046 10.822 12.3046 9.00042C12.3046 7.17882 10.8214 5.69922 8.99981 5.69922Z"
-                                            fill="#8F8F8F" />
-                                        <path
-                                            d="M13.9824 0H4.0176C1.8036 0 0 1.8036 0 4.0176V13.9824C0 16.2 1.8036 18 4.0176 18H13.9824C16.2 18 18 16.2 18 13.9824V4.0176C18 1.8036 16.2 0 13.9824 0ZM9 14.832C5.7852 14.832 3.168 12.2148 3.168 9C3.168 5.7852 5.7852 3.1716 9 3.1716C12.2148 3.1716 14.832 5.7852 14.832 9C14.832 12.2148 12.2148 14.832 9 14.832ZM14.9544 4.23C14.274 4.23 13.7196 3.6792 13.7196 2.9988C13.7196 2.3184 14.274 1.764 14.9544 1.764C15.6348 1.764 16.1892 2.3184 16.1892 2.9988C16.1892 3.6792 15.6348 4.23 14.9544 4.23Z"
-                                            fill="#8F8F8F" />
-                                    </svg>
-                                    Instagram
-                                </span>
-                            </a></li> -->
-                </ul>
+                   </ul>
             </div>
         </div>
 

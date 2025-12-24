@@ -207,7 +207,8 @@
 
     <style>
         .brand-logo img {
-    width: 70% !important;
+    width: 100% !important;
+    height:108px;
 }
     </style>
     <!--end::Header Mobile-->
