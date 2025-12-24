@@ -107,7 +107,7 @@
 
                                 </div>
 
-                                      <div class="col-lg-12">
+                                      <!-- <div class="col-lg-12">
                                     <div class="form-group mt-2 mb-3 text-left">
                                         <label for="optinvesttype"> Wallet Address</label>
                                       
@@ -115,7 +115,7 @@
                                              placeholder=" Wallet Address">
                                     </div>
 
-                                </div>
+                                </div> -->
 
 
 

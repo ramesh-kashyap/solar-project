@@ -88,7 +88,7 @@
     color: #ffffff;
 }
 .btn-primary {
-    background: radial-gradient(circle, #A93E17, #15399A) !important;    
+    background: radial-gradient(circle, #179b46, #166971) !important;    
     border: none !important;
     height: 45px !important;
     font-size: 14px !important;
@@ -124,8 +124,8 @@
     <!--begin::Header Mobile-->
     <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
         <!--begin::Logo-->
-        <a href="/">
-            <img alt="Logo" src="{{asset('')}}assets/images/Logo.png"  style="width: 100px;">
+        <a href="/" style="width:80px;">
+            <img alt="Logo" src="{{asset('')}}assets/images/Logo.png"  >
         </a>
         <!--end::Logo-->
         <!--begin::Toolbar-->
@@ -207,8 +207,7 @@
 
     <style>
         .brand-logo img {
-    width: 100% !important;
-    height:108px;
+    width: 35% !important;
 }
     </style>
     <!--end::Header Mobile-->
@@ -588,12 +587,12 @@
                                                 <span class="menu-text">Password Setting</span>
                                             </a>
                                         </li>
-                                        <!-- <li class="menu-item menu-item-submenu" aria-haspopup="true"
+                                        <li class="menu-item menu-item-submenu" aria-haspopup="true"
                                             data-menu-toggle="hover">
-                                            <a href="{{route('user.trx-password')}}" class="menu-link">
-                                                <span class="menu-text">Change Transaction Password</span>
+                                            <a href="{{route('user.BankDetail')}}" class="menu-link">
+                                                <span class="menu-text">Bank Detail</span>
                                             </a>
-                                        </li> -->
+                                        </li>
                                     </ul>
                                 </div>
 

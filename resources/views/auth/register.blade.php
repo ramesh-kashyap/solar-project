@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+register <!DOCTYPE html>
 
 <html lang="zxx">
 
